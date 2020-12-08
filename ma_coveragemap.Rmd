@@ -39,10 +39,10 @@ munis$z_pop <- round((munis$bt_vs_pop - mean(munis$bt_vs_pop, na.rm=T)) / sd(mun
 munis$z_pop <- ifelse(munis$z_pop>2,2,munis$z_pop)
 munis$z_pop <- ifelse(munis$z_pop < -2,-2,munis$z_pop)
 
-baseline_Twitter <- munis %>% select(geometry, z_tweets)
-names(baseline_Twitter)[1] <- "Coverage"
-baseline_Population <- munis %>% select(geometry, z_pop)
-names(baseline_Population)[1] <- "Coverage"
+baseline_Twitter <- munis %>% select(NAMEUNIT,z_tweets,geometry)
+names(baseline_Twitter)[2] <- "Coverage"
+baseline_Population <- munis %>% select(NAMEUNIT, z_pop, geometry)
+names(baseline_Population)[2] <- "Coverage"
 ```
 
 
@@ -50,6 +50,7 @@ names(baseline_Population)[1] <- "Coverage"
 map <- tm_basemap("Esri.WorldTopoMap") +
   tm_shape(baseline_Twitter) + tm_fill("Coverage", alpha = .50) +
   tm_shape(baseline_Population) + tm_fill("Coverage", alpha = .50)
+
 map %>% 
   tmap_leaflet() %>%
   leaflet::hideGroup("baseline_Population")
