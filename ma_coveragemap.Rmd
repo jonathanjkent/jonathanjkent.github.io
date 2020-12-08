@@ -1,0 +1,38 @@
+---
+title: "User Coverage by Municipality"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(sf)
+library(rmapshaper)
+library(tmap)
+tmap_mode("view")
+
+points <- st_read("~/research/randomsummerpoints.shp")
+munis <- st_read("/Users/jonkent/Downloads/SIGLIM_Publico_INSPIRE/SHP_ETRS89/recintos_municipales_inspire_peninbal_etrs89/recintos_municipales_inspire_peninbal_etrs89.shp") %>% select(NAMEUNIT,geometry)
+munis <- st_transform(munis, "+proj=longlat +ellps=WGS84 +datum=WGS84")
+munis$bt_count <- lengths(st_intersects(munis, points))
+
+tweets <- read_csv("~/research/tweets_jul1_sep15.csv")
+tweets <- tweets %>% st_as_sf(coords = c("lon", "lat"), crs = "+proj=longlat +ellps=WGS84 +datum=WGS84")
+munis$tw_count <- lengths(st_intersects(munis, tweets))
+
+munis <- rmapshaper::ms_simplify(munis, keep = 0.01, keep_shapes = TRUE)
+
+munis$bt_pct <- munis$bt_count/sum(munis$bt_count)
+munis$tw_pct <- munis$tw_count/sum(munis$tw_count)
+munis$bt_vs_tweets <- munis$bt_pct - munis$tw_pct
+
+munis$z_tweets <- round((munis$bt_vs_tweets - mean(munis$bt_vs_tweets, na.rm=T)) / sd(munis$bt_vs_tweets, na.rm=T),1)
+munis$z_tweets <- ifelse(munis$z_tweets>2,2,munis$z_tweets)
+munis$z_tweets <- ifelse(munis$z_tweets < -2,-2,munis$z_tweets)
+```
+
+
+```{r echo=F, warning=F, message=F, out.width = '100%', out.height = 700}
+tm_shape(munis) + tm_fill("z_tweets", alpha = .50)
+```
+
