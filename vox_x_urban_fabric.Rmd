@@ -1,0 +1,184 @@
+---
+title: "How Urban Design Predicts Sympathy for the Far Right"
+subtitle: "A Case Study of Vox and 73 Spanish Cities"
+author: "Jonathan Kent, Universitat Pompeu Fabra"
+date: "March 23, 2021"
+output: 
+  ioslides_presentation:
+    css: slide.css
+    logo: demosoc_logo.jpg
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Background: Theoretical Framework
+
+- Nativism is central to the modern far right, and it's ideology holds that race, gender, and other inequalities are natural and even positive (Mudde 2007, 2019).
+
+- Contact theory research has demonstrated that such prejudicial views toward out-groups can be reduced though interaction (Pettigrew et al. 2011).
+
+- Certain forms of urban design promote more contact between neighbors that others (Jacobs 1961, Gehl 2011).
+
+- Implication: in some cities there should be more interaction, less prejudice, and less support for the far right.
+
+## Background: Far right
+
+- We are now in the fourth wave of the rise of the far right in Europe (Mudde 2019).
+
+- At the individual level, research explaining this rise has focused on economic and cultural grievance hypotheses, with mixed results (Golder 2016).
+
+- These same hypotheses have been applied to the social context, operationalized as unemployment rates and migrant populations (e.g.  Georgiadou et al. 2018).
+
+- Most of the literature stays within this competition framework, though there are interesting exceptions (e.g. Bolet 2021).
+
+## Background: Contact theory
+
+- There is a very large literature that direct contact reduces prejudice (Pettigrew et al. 2011).
+
+- However, newer literature on *extended* contact is particularly interesting (Zhou et al. 2018).
+
+- People whose friends have out-group friends are less likely to be prejudiced.
+
+- People who observe, but don't participate in, intergroup contact are also less likely to be prejudiced.
+
+- At the scale of a city, the potential impact is enormous.
+
+## Background: Urban theory
+
+- Modernist design trends inserted openness into previously continuous urban fabric throughout the 20th century.
+
+- Two dueling philosophies argued that cities should expand horizontally (urban sprawl) or vertically (set-back residential high-rises). For both, grass and light was essential.
+
+- Jacobs (1961) famously sounded the alarm that these trends were degrading the vitality of cities, reducing interaction between neighbors.
+
+- EEA's CORINE Land Cover data distinguishes between *continuous urban fabric* and *discontinuous urban fabric* which broadly captures the dichotomy between compact, traditional designs and modernist, open ones.
+
+## Hypotheses
+
+- H1: Residents of cities with more continuous urban fabric will be less likely to have sympathy for far-right parties.
+
+- H2: The negative relationship between continuous urban fabric and far-right sympathy will be stronger in cities with larger relative migrant populations.
+
+## Case Selection & Data
+
+- I study a single country, to reduce variation in political context and maximize data availability and consistency.
+
+- Vox is very similar to other radical-right parties in Europe, especially in its anti-immigrant and anti-feminism stances (Gould 2019, Arcila Calderón et al. 2020, Bernardez-Rodal et al. 2020).
+
+- At the individual level, data comes from 12 pooled CIS barometer surveys from January 2019 to March 2020, which ask respondents how likely they are to support Vox on a 0 (never) to 10 (always) scale. The dichotomous outcome variable treats response 1-10 as *sympathy for the far right*.
+
+- City-level data is provided by Eurostat.
+
+## Methods
+
+- Hypotheses are tested using Bayesian multilevel logistic regression models fitted with rstanarm.
+
+- Models include urban fabric, population, and density, as well as variables common to the literature: unemployment rate, migrant population, and change in migrant population. All city-level variables are coded as one-standard-deviation z-scores.
+
+- At the individual level, I include age, age^2^, gender, religion, education, and occupation variables. I model separate intercepts for all categorical variables.
+
+- I also account for variation in the political context by including survey date as a continuous variable and CCAA as a level.
+
+## Findings: Models
+
+```{r echo = F, message = F}
+library(tidyverse)
+library(rstanarm)
+library(bayesplot)
+library(ggpubr)
+library(plotly)
+
+bayesplot_theme_set(theme_minimal())
+
+load("~/Google Drive/PhD/Paper Two/M1.rda")
+model <- M1
+rm(M1)
+
+load("~/Google Drive/PhD/Paper Two/M2.rda")
+model_change <- M2
+rm(M2)
+
+load("~/Google Drive/PhD/Paper Two/RC1.rda")
+model_density <- RC1
+rm(RC1)
+
+load("~/Google Drive/PhD/Paper Two/M3.rda")
+model_interaction <- M3
+rm(M3)
+
+p1 <- mcmc_areas(as.matrix(model), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_minimal() + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment"), limits = c("z.population","z.migrants","z.unemployment","z.urban.fabric"))
+
+p2 <- mcmc_areas(as.matrix(model_change), pars = c("z.urban.fabric","z.migrants.change","z.unemployment","z.population"),prob = 0.9, prob_outer = 0.99) + theme_minimal() + geom_vline(xintercept = 0) + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants.change" =  "Migrant Change","z.unemployment" = "Unemployment"), limits = c("z.population","z.migrants.change","z.unemployment","z.urban.fabric"))
+
+p3 <- mcmc_areas(as.matrix(model_density), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population", "z.density"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_minimal() + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment", "z.density" = "Density"), limits = c("z.density","z.population","z.migrants","z.unemployment","z.urban.fabric"))
+
+p4 <- mcmc_areas(as.matrix(model_interaction), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population", "z.urban.fabric:z.migrants"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_minimal() + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment", "z.urban.fabric:z.migrants" = "Urban Fab. x Mig. Pop."), limits = c("z.urban.fabric:z.migrants","z.population","z.migrants","z.unemployment","z.urban.fabric"))
+
+ggarrange(p1, p2, p3, p4,
+          labels = c("M1", "M2", "M3", "M4"),
+          ncol = 2, nrow = 2)
+```
+
+## Findings: H1 Simulations
+
+``` {r echo = F, message = F}
+h1sim <- read_csv("~/Google Drive/PhD/Paper Two/h1sim.csv") %>% rename(Urban.Fabric = uf, Vox.Sympathy = vox)
+
+ggplotly(ggplot(h1sim, aes(Urban.Fabric,Vox.Sympathy)) + geom_point(color = "#00346e", alpha = .2, size = 3) + theme_minimal() + labs(x = "Counterfactual Continuous Urban Fabric (z-score)", y = "Sympathy for Vox (%)"))
+```
+
+## Findings: H2 Simulations
+
+``` {r echo = F, message = F}
+h2sim <- read_csv("~/Google Drive/PhD/Paper Two/h2sim.csv") %>% rename(Urban.Fabric = uf, Vox.Sympathy = vox, Migrant.Pop = mig)
+
+ggplot(h2sim, aes(Urban.Fabric, Vox.Sympathy, color = Migrant.Pop)) + geom_point(alpha = .15, size = 2) + geom_smooth(method = "lm")  + theme_minimal() + theme(legend.position="bottom") + labs(x = "Counterfactual Continuous Urban Fabric (z-score)", y = "Sympathy for Vox (%)", color = "Migrant Pop.")
+```
+
+## Sensitivity Analysis
+
+``` {r echo = F, message = F}
+cutoffs <- read_csv("~/research/stan_bi_runs.csv") %>% rename(pi10 = pi25, pi90 = pi75)
+cutoffs$cutoff <- paste0("> ",cutoffs$cutoff)
+
+ggplot() + geom_linerange(data = cutoffs, aes(y = cutoff, xmin = pi2_5, xmax = pi97_5), color = "#c6dbe9", size = 2) + geom_linerange(data = cutoffs, aes(y = cutoff, xmin = pi10, xmax = pi90), color = "#00346e", size = 5) + geom_vline(xintercept = 0) + theme_minimal() + labs(x = "Cont. Urban Fabric Coefficient", y = 'Coding of "Sympathy for Vox"')
+```
+
+## Conclusions
+
+- The explanatory literature on far-right support should shift its focus from the economic grievance vs. cultural grievance debate. As this paper and Bolet (2021) show, there is much more to the social context.
+
+- We may focus too much on immigration issues, as well. The far right seeks to perpetuate many other inequalities, especially gender.
+
+- Social scientists should give more consideration to urban fabric. Climate change will force us to redesign our cities again, and we need to be part of the conversation.
+
+## References
+<font size="2">
+
+Bernardez-Rodal, A., Rey, P.R., and Franco, Y.G. (2020). Radical right parties and anti-feminist speech on Instagram: Vox and the 2019 Spanish general election. *Party Politics*.
+
+Bolet, D. (2021). Drinking alone: Local socio-cultural degradation and radical right support, the case of British pub closures. *Comparative Political Studies*.
+
+Calderón, C. A., de la Vega, G., and Herrero, D. B. (2020). Topic modeling and characterization of  hate speech against immigrants on twitter around the emergence of a far-right party in Spain. *Social Sciences*, 9(11):188.
+
+Gehl, J. (2011). *Life between buildings: using public space*. Island Press, Washington, DC.
+
+Georgiadou, V., Rori, L., and Roumanias, C. (2018). Mapping the european far right in the 21st century:  A meso-level analysis. *Electoral Studies*, 54:103–115.
+
+Golder, M. (2016). Far right parties in europe. *Annual Review of Political Science*, 19(1):477–497.
+
+Gould, R. (2019). Vox España and Alternative für Deutschland: Propagating the crisis of national identity. *Genealogy*, 3(4):64.
+
+Jacobs, J. (1961). *The  Death  and  Life  of  Great  American  Cities*. Random House, New York, NY.
+
+Mudde, C. (2007). *Populist radical right parties in Europe*. Cambridge University Press, Cambridge, UK.
+
+Mudde, C. (2019). *The far right today*. Polity, Cambridge, UK.
+
+Pettigrew, T.F., Tropp, L.R., Wagner, U., and Christ, O. (2011). Recent advances in intergroup contact theory. *International Journal of Intercultural Relations*, 35(3):271–280.
+
+Zhou, S., Page-Gould, E., Aron, A., Moyer, A., and Hewstone, M. (2018). The extended contact hypothesis: A meta-analysis on 20 years of research. *Personality and Social Psychology Review*, 23(2):132–160.
+
+</font>
