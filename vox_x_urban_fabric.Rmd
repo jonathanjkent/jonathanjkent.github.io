@@ -1,9 +1,7 @@
 ---
-title: "How Urban Design Predicts Sympathy for the Far Right"
+title: "How Urban Design Predicts</br>Sympathy for the Far Right"
 subtitle: "A Case Study of Vox and 73 Spanish Cities"
 author: "Jonathan Kent"
-date: "March 23, 2021"
-institute: "Universitat Pompeu Fabra"
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
@@ -32,14 +30,27 @@ knitr::opts_chunk$set(
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
 style_mono_accent(
-  base_color = "#001c3b",
+  base_color = "#353889",
   header_font_google = google_font("Fira Sans", "200", "200i"),
   text_font_google   = google_font("Bitter"),
-  text_font_size = "1.4rem"
+  text_font_size = "1.4rem",
+  title_slide_background_image = "demosoc_logo.jpg",
+  title_slide_background_size = "180px 135px",
+  title_slide_background_position = "bottom"
 )
 ```
 
-# Background: Theoretical Framework
+```{r xaringan-logo, echo=FALSE}
+library(xaringanExtra)
+use_logo(
+  image_url = "https://waronimmigrants.github.io/images/demosoc_logo.png",
+  width = "242px",
+  height = "39px",
+  position = css_position(top = "1em", right = "1em")
+)
+```
+
+# Theoretical Framework
 
 - Nativism is central to the modern far right, and it's ideology holds that race, gender, and other inequalities are natural and even positive (Mudde 2007, 2019).
 
@@ -51,7 +62,7 @@ style_mono_accent(
 
 ---
 
-# Background: Far right
+# Framework: Far right
 
 - We are now in the fourth wave of the rise of the far right in Europe (Mudde 2019).
 
@@ -63,7 +74,7 @@ style_mono_accent(
 
 ---
 
-# Background: Contact theory
+# Framework: Contact theory
 
 - There is a very large literature that direct contact reduces prejudice (Pettigrew et al. 2011).
 
@@ -77,7 +88,7 @@ style_mono_accent(
 
 ---
 
-# Background: Urban theory
+# Framework: Urban theory
 
 - Modernist design trends inserted openness into previously continuous urban fabric throughout the 20th century.
 
