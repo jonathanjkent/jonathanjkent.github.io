@@ -137,9 +137,8 @@ a, a > code {
 }
 .title-slide {
   background-color: var(--title-slide-background-color);
-  background-image: url("demosoc_logo.jpg");
-  background-size: 180px 135px;
-  background-position: bottom;
+  background-image: url("demosocBG.png");
+  background-size: cover;
 }
 .title-slide .remark-slide-number {
   display: none;

@@ -34,9 +34,7 @@ style_mono_accent(
   header_font_google = google_font("Fira Sans", "200", "200i"),
   text_font_google   = google_font("Bitter"),
   text_font_size = "1.4rem",
-  title_slide_background_image = "demosoc_logo.jpg",
-  title_slide_background_size = "180px 135px",
-  title_slide_background_position = "bottom"
+  title_slide_background_image = "demosocBG.png"
 )
 ```
 
