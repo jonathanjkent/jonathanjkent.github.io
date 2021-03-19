@@ -1,10 +1,13 @@
 ---
-title: "How Urban Design Predicts</br>Sympathy for the Far Right"
+title: "Does Urban Design Predict</br>Sympathy for the Far Right?"
 subtitle: "A Case Study of Vox and 73 Spanish Cities"
-author: "Jonathan Kent"
+author: "Jonathan Kent | March 23, 2021"
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: 
+      - xaringan-themer.css
+      - xaringan-title.css
+      - "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -27,18 +30,19 @@ knitr::opts_chunk$set(
 )
 ```
 
-```{r xaringan-themer, include=FALSE, warning=FALSE}
+```{r xaringan-themer}
 library(xaringanthemer)
 style_mono_accent(
   base_color = "#353889",
-  header_font_google = google_font("Fira Sans", "200", "200i"),
-  text_font_google   = google_font("Bitter"),
+  header_font_google = google_font("Forum"),
+  text_font_google   = google_font("Lato", 300),
   text_font_size = "1.4rem",
-  title_slide_background_image = "demosocBG.png"
+  title_slide_background_image = "demosocBG.png",
+  text_color = "#05050d"
 )
 ```
 
-```{r xaringan-logo, echo=FALSE}
+```{r xaringan-extra}
 library(xaringanExtra)
 use_logo(
   image_url = "https://waronimmigrants.github.io/images/demosoc_logo.png",
@@ -46,6 +50,7 @@ use_logo(
   height = "39px",
   position = css_position(top = "1em", right = "1em")
 )
+#use_animate_all("fade")
 ```
 
 # Theoretical Framework
@@ -140,7 +145,15 @@ library(ggpubr)
 library(plotly)
 
 bayesplot_theme_set(theme_xaringan(background_color = "#FFFFFF"))
-theme_set(theme_xaringan(background_color = "#FFFFFF", title_font_size = 15, text_font_size = 13))
+theme_set(theme_xaringan(background_color = "#FFFFFF", 
+                         title_font_size = 17, 
+                         text_font_size = 13, 
+                         text_color = "#05050d",
+                         accent_color = "#0f1029",
+                         text_font = "Lato",
+                         text_font_use_google = TRUE,
+                         title_font = "Lato",
+                         title_font_use_google = TRUE))
 
 load("~/Google Drive/PhD/Paper Two/M1.rda")
 model <- M1
@@ -158,13 +171,45 @@ load("~/Google Drive/PhD/Paper Two/M3.rda")
 model_interaction <- M3
 rm(M3)
 
-p1 <- mcmc_areas(as.matrix(model), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_minimal() + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment"), limits = c("z.population","z.migrants","z.unemployment","z.urban.fabric"))
+p1 <- mcmc_areas(as.matrix(model), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF", 
+                         title_font_size = 13, 
+                         text_font_size = 9, 
+                         text_color = "#05050d",
+                         accent_color = "#0f1029",
+                         text_font = "Lato",
+                         text_font_use_google = TRUE,
+                         title_font = "Lato",
+                         title_font_use_google = TRUE) + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment"), limits = c("z.population","z.migrants","z.unemployment","z.urban.fabric"))
 
-p2 <- mcmc_areas(as.matrix(model_change), pars = c("z.urban.fabric","z.migrants.change","z.unemployment","z.population"),prob = 0.9, prob_outer = 0.99) + theme_minimal() + geom_vline(xintercept = 0) + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants.change" =  "Migrant Change","z.unemployment" = "Unemployment"), limits = c("z.population","z.migrants.change","z.unemployment","z.urban.fabric"))
+p2 <- mcmc_areas(as.matrix(model_change), pars = c("z.urban.fabric","z.migrants.change","z.unemployment","z.population"),prob = 0.9, prob_outer = 0.99)+ geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF", 
+                         title_font_size = 13, 
+                         text_font_size = 9, 
+                         text_color = "#05050d",
+                         accent_color = "#0f1029",
+                         text_font = "Lato",
+                         text_font_use_google = TRUE,
+                         title_font = "Lato",
+                         title_font_use_google = TRUE) + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants.change" =  "Migrant Change","z.unemployment" = "Unemployment"), limits = c("z.population","z.migrants.change","z.unemployment","z.urban.fabric"))
 
-p3 <- mcmc_areas(as.matrix(model_density), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population", "z.density"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_minimal() + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment", "z.density" = "Density"), limits = c("z.density","z.population","z.migrants","z.unemployment","z.urban.fabric"))
+p3 <- mcmc_areas(as.matrix(model_density), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population", "z.density"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF", 
+                         title_font_size = 13, 
+                         text_font_size = 9, 
+                         text_color = "#05050d",
+                         accent_color = "#0f1029",
+                         text_font = "Lato",
+                         text_font_use_google = TRUE,
+                         title_font = "Lato",
+                         title_font_use_google = TRUE) + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment", "z.density" = "Density"), limits = c("z.density","z.population","z.migrants","z.unemployment","z.urban.fabric"))
 
-p4 <- mcmc_areas(as.matrix(model_interaction), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population", "z.urban.fabric:z.migrants"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_minimal() + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment", "z.urban.fabric:z.migrants" = "Urban Fab. x Mig. Pop."), limits = c("z.urban.fabric:z.migrants","z.population","z.migrants","z.unemployment","z.urban.fabric"))
+p4 <- mcmc_areas(as.matrix(model_interaction), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population", "z.urban.fabric:z.migrants"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF", 
+                         title_font_size = 13, 
+                         text_font_size = 9, 
+                         text_color = "#05050d",
+                         accent_color = "#0f1029",
+                         text_font = "Lato",
+                         text_font_use_google = TRUE,
+                         title_font = "Lato",
+                         title_font_use_google = TRUE) + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment", "z.urban.fabric:z.migrants" = "Urban Fab. x Mig. Pop."), limits = c("z.urban.fabric:z.migrants","z.population","z.migrants","z.unemployment","z.urban.fabric"))
 
 ggarrange(p1, p2, p3, p4,
           labels = c("M1", "M2", "M3", "M4"),
@@ -178,7 +223,7 @@ ggarrange(p1, p2, p3, p4,
 ``` {r}
 h1sim <- read_csv("~/Google Drive/PhD/Paper Two/h1sim.csv") %>% rename(Urban.Fabric = uf, Vox.Sympathy = vox)
 
-ggplot(h1sim, aes(Urban.Fabric,Vox.Sympathy)) + geom_point(color = "#00346e", alpha = .2, size = 3) + theme_minimal() + labs(x = "Counterfactual Continuous Urban Fabric (z-score)", y = "Sympathy for Vox (%)")
+ggplot(h1sim, aes(Urban.Fabric,Vox.Sympathy)) + geom_point(color = "#353889", alpha = .2, size = 3) + labs(x = "Counterfactual Continuous Urban Fabric (z-score)", y = "Sympathy for Vox (%)")
 ```
 
 ---
@@ -188,7 +233,7 @@ ggplot(h1sim, aes(Urban.Fabric,Vox.Sympathy)) + geom_point(color = "#00346e", al
 ``` {r echo = F, message = F}
 h2sim <- read_csv("~/Google Drive/PhD/Paper Two/h2sim.csv") %>% rename(Urban.Fabric = uf, Vox.Sympathy = vox, Migrant.Pop = mig)
 
-ggplot(h2sim, aes(Urban.Fabric, Vox.Sympathy, color = Migrant.Pop)) + geom_point(alpha = .15, size = 2) + geom_smooth(method = "lm")  + theme_minimal() + theme(legend.position="bottom") + labs(x = "Counterfactual Continuous Urban Fabric (z-score)", y = "Sympathy for Vox (%)", color = "Migrant Pop.")
+ggplot(h2sim, aes(Urban.Fabric, Vox.Sympathy, color = Migrant.Pop)) + geom_point(alpha = .15, size = 2) + geom_smooth(method = "lm") + theme(legend.position="bottom") + labs(x = "Counterfactual Continuous Urban Fabric (z-score)", y = "Sympathy for Vox (%)", color = "Migrant Pop.") + scale_color_manual(values = c("High (2)" = "#353889", "Low (-2)" = "#893538"))
 ```
 
 ---
@@ -199,7 +244,7 @@ ggplot(h2sim, aes(Urban.Fabric, Vox.Sympathy, color = Migrant.Pop)) + geom_point
 cutoffs <- read_csv("~/research/stan_bi_runs.csv") %>% rename(pi10 = pi25, pi90 = pi75)
 cutoffs$cutoff <- paste0("> ",cutoffs$cutoff)
 
-ggplot() + geom_linerange(data = cutoffs, aes(y = cutoff, xmin = pi2_5, xmax = pi97_5), color = "#c6dbe9", size = 2) + geom_linerange(data = cutoffs, aes(y = cutoff, xmin = pi10, xmax = pi90), color = "#00346e", size = 5) + geom_vline(xintercept = 0) + theme_minimal() + labs(x = "Cont. Urban Fabric Coefficient", y = 'Coding of "Sympathy for Vox"')
+ggplot() + geom_linerange(data = cutoffs, aes(y = cutoff, xmin = pi2_5, xmax = pi97_5), color = "#aeafcf", size = 2) + geom_linerange(data = cutoffs, aes(y = cutoff, xmin = pi10, xmax = pi90), color = "#353889", size = 2) + geom_vline(xintercept = 0) + labs(x = "Cont. Urban Fabric Coefficient", y = 'Coding of "Sympathy for Vox"')
 ```
 
 ---
@@ -222,7 +267,7 @@ Bernardez-Rodal, A., Rey, P.R., and Franco, Y.G. (2020). Radical right parties a
 
 Bolet, D. (2021). Drinking alone: Local socio-cultural degradation and radical right support, the case of British pub closures. <i>Comparative Political Studies</i>.</br>
 
-Calderón, C. A., de la Vega, G., and Herrero, D. B. (2020). Topic modeling and characterization of  hate speech against immigrants on twitter around the emergence of a far-right party in Spain. <i>Social Sciences</i>, 9(11):188.</br>
+Calderón, C. A., de la Vega, G., and Herrero, D. B. (2020). Topic modeling and char. of hate speech against immigrants on Twitter around the emergence of a far-right party in Spain. <i>Social Sciences</i>.</br>
 
 Gehl, J. (2011). <i>Life between buildings: using public space</i>. Island Press, Washington, DC.</br>
 
@@ -240,6 +285,6 @@ Mudde, C. (2019). <i>The far right today</i>. Polity, Cambridge, UK.</br>
 
 Pettigrew, T.F., Tropp, L.R., Wagner, U., and Christ, O. (2011). Recent advances in intergroup contact theory. <i>International Journal of Intercultural Relations</i>, 35(3):271–280.</br>
 
-Zhou, S., Page-Gould, E., Aron, A., Moyer, A., and Hewstone, M. (2018). The extended contact hypothesis: A meta-analysis on 20 years of research. <i>Personality and Social Psychology Review</i>, 23(2):132–160.</br>
+Zhou, S., Page-Gould, E., Aron, A., Moyer, A., and Hewstone, M. (2018). The extended contact hypothesis: A meta-analysis on 20 years of research. <i>Personality and Social Psychology Review</i>.</br>
 
 </font>
