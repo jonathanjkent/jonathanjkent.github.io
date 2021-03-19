@@ -145,9 +145,9 @@ library(ggpubr)
 library(plotly)
 
 bayesplot_theme_set(theme_xaringan(background_color = "#FFFFFF"))
-theme_set(theme_xaringan(background_color = "#FFFFFF", 
-                         title_font_size = 17, 
-                         text_font_size = 13, 
+theme_set(theme_xaringan(background_color = "#FFFFFF",
+                         title_font_size = 17,
+                         text_font_size = 13,
                          text_color = "#05050d",
                          accent_color = "#0f1029",
                          text_font = "Lato",
@@ -171,9 +171,9 @@ load("~/Google Drive/PhD/Paper Two/M3.rda")
 model_interaction <- M3
 rm(M3)
 
-p1 <- mcmc_areas(as.matrix(model), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF", 
-                         title_font_size = 13, 
-                         text_font_size = 9, 
+p1 <- mcmc_areas(as.matrix(model), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF",
+                         title_font_size = 13,
+                         text_font_size = 9,
                          text_color = "#05050d",
                          accent_color = "#0f1029",
                          text_font = "Lato",
@@ -181,9 +181,9 @@ p1 <- mcmc_areas(as.matrix(model), pars = c("z.urban.fabric","z.migrants","z.une
                          title_font = "Lato",
                          title_font_use_google = TRUE) + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment"), limits = c("z.population","z.migrants","z.unemployment","z.urban.fabric"))
 
-p2 <- mcmc_areas(as.matrix(model_change), pars = c("z.urban.fabric","z.migrants.change","z.unemployment","z.population"),prob = 0.9, prob_outer = 0.99)+ geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF", 
-                         title_font_size = 13, 
-                         text_font_size = 9, 
+p2 <- mcmc_areas(as.matrix(model_change), pars = c("z.urban.fabric","z.migrants.change","z.unemployment","z.population"),prob = 0.9, prob_outer = 0.99)+ geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF",
+                         title_font_size = 13,
+                         text_font_size = 9,
                          text_color = "#05050d",
                          accent_color = "#0f1029",
                          text_font = "Lato",
@@ -191,9 +191,9 @@ p2 <- mcmc_areas(as.matrix(model_change), pars = c("z.urban.fabric","z.migrants.
                          title_font = "Lato",
                          title_font_use_google = TRUE) + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants.change" =  "Migrant Change","z.unemployment" = "Unemployment"), limits = c("z.population","z.migrants.change","z.unemployment","z.urban.fabric"))
 
-p3 <- mcmc_areas(as.matrix(model_density), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population", "z.density"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF", 
-                         title_font_size = 13, 
-                         text_font_size = 9, 
+p3 <- mcmc_areas(as.matrix(model_density), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population", "z.density"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF",
+                         title_font_size = 13,
+                         text_font_size = 9,
                          text_color = "#05050d",
                          accent_color = "#0f1029",
                          text_font = "Lato",
@@ -201,9 +201,9 @@ p3 <- mcmc_areas(as.matrix(model_density), pars = c("z.urban.fabric","z.migrants
                          title_font = "Lato",
                          title_font_use_google = TRUE) + scale_y_discrete(labels=c("z.urban.fabric" = "Urban Fabric","z.population" = "Overall Pop.","z.migrants" =  "Migrant Pop.","z.unemployment" = "Unemployment", "z.density" = "Density"), limits = c("z.density","z.population","z.migrants","z.unemployment","z.urban.fabric"))
 
-p4 <- mcmc_areas(as.matrix(model_interaction), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population", "z.urban.fabric:z.migrants"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF", 
-                         title_font_size = 13, 
-                         text_font_size = 9, 
+p4 <- mcmc_areas(as.matrix(model_interaction), pars = c("z.urban.fabric","z.migrants","z.unemployment","z.population", "z.urban.fabric:z.migrants"),prob = 0.9, prob_outer = 0.99) + geom_vline(xintercept = 0) + theme_xaringan(background_color = "#FFFFFF",
+                         title_font_size = 13,
+                         text_font_size = 9,
                          text_color = "#05050d",
                          accent_color = "#0f1029",
                          text_font = "Lato",
