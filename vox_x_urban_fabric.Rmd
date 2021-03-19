@@ -1,5 +1,5 @@
 ---
-title: "Does Urban Design Predict</br>Sympathy for the Far Right?"
+title: "Does Urban Design Predict </br>Sympathy for the Far Right?"
 subtitle: "A Case Study of Vox and 73 Spanish Cities"
 author: "Jonathan Kent | March 23, 2021"
 output:
