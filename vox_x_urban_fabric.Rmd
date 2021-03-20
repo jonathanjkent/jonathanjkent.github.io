@@ -7,7 +7,6 @@ output:
     css: 
       - xaringan-themer.css
       - xaringan-title.css
-      - "https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
     lib_dir: libs
     nature:
       highlightStyle: github
@@ -50,10 +49,9 @@ use_logo(
   height = "39px",
   position = css_position(top = "1em", right = "1em")
 )
-#use_animate_all("fade")
 ```
 
-# Theoretical Framework
+## Theoretical Framework
 
 - Nativism is central to the modern far right, and it's ideology holds that race, gender, and other inequalities are natural and even positive (Mudde 2007, 2019).
 
@@ -65,7 +63,7 @@ use_logo(
 
 ---
 
-# Framework: Far right
+## Framework: Far right
 
 - We are now in the fourth wave of the rise of the far right in Europe (Mudde 2019).
 
@@ -77,7 +75,7 @@ use_logo(
 
 ---
 
-# Framework: Contact theory
+## Framework: Contact theory
 
 - There is a very large literature that direct contact reduces prejudice (Pettigrew et al. 2011).
 
@@ -91,7 +89,7 @@ use_logo(
 
 ---
 
-# Framework: Urban theory
+## Framework: Urban theory
 
 - Modernist design trends inserted openness into previously continuous urban fabric throughout the 20th century.
 
@@ -103,7 +101,7 @@ use_logo(
 
 ---
 
-# Hypotheses
+## Hypotheses
 
 - H1: Residents of cities with more continuous urban fabric will be less likely to have sympathy for far-right parties.
 
@@ -111,7 +109,7 @@ use_logo(
 
 ---
 
-# Case Selection & Data
+## Case Selection & Data
 
 - I study a single country, to reduce variation in political context and maximize data availability and consistency.
 
@@ -123,7 +121,7 @@ use_logo(
 
 ---
 
-# Methods
+## Methods
 
 - Hypotheses are tested using Bayesian multilevel logistic regression models fitted with rstanarm.
 
@@ -135,7 +133,7 @@ use_logo(
 
 ---
 
-# Findings: Models
+## Findings: Models
 
 ```{r}
 library(tidyverse)
@@ -218,7 +216,7 @@ ggarrange(p1, p2, p3, p4,
 
 ---
 
-# Findings: H1 Simulations
+## Findings: H1 Simulations
 
 ``` {r}
 h1sim <- read_csv("~/Google Drive/PhD/Paper Two/h1sim.csv") %>% rename(Urban.Fabric = uf, Vox.Sympathy = vox)
@@ -228,7 +226,7 @@ ggplot(h1sim, aes(Urban.Fabric,Vox.Sympathy)) + geom_point(color = "#353889", al
 
 ---
 
-# Findings: H2 Simulations
+## Findings: H2 Simulations
 
 ``` {r echo = F, message = F}
 h2sim <- read_csv("~/Google Drive/PhD/Paper Two/h2sim.csv") %>% rename(Urban.Fabric = uf, Vox.Sympathy = vox, Migrant.Pop = mig)
@@ -238,7 +236,7 @@ ggplot(h2sim, aes(Urban.Fabric, Vox.Sympathy, color = Migrant.Pop)) + geom_point
 
 ---
 
-# Sensitivity Analysis
+## Sensitivity Analysis
 
 ``` {r echo = F, message = F}
 cutoffs <- read_csv("~/research/stan_bi_runs.csv") %>% rename(pi10 = pi25, pi90 = pi75)
@@ -249,7 +247,7 @@ ggplot() + geom_linerange(data = cutoffs, aes(y = cutoff, xmin = pi2_5, xmax = p
 
 ---
 
-# Conclusions
+## Conclusions
 
 - The explanatory literature on far-right support should shift its focus from the economic grievance vs. cultural grievance debate. As this paper and Bolet (2021) show, there is much more to the social context.
 
@@ -260,7 +258,7 @@ ggplot() + geom_linerange(data = cutoffs, aes(y = cutoff, xmin = pi2_5, xmax = p
 
 ---
 
-# References
+## References
 <font size="2">
 
 Bernardez-Rodal, A., Rey, P.R., and Franco, Y.G. (2020). Radical right parties and anti-feminist speech on Instagram: Vox and the 2019 Spanish general election. <i>Party Politics</i>.</br>
