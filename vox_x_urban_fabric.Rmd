@@ -33,7 +33,7 @@ knitr::opts_chunk$set(
 library(xaringanthemer)
 style_mono_accent(
   base_color = "#353889",
-  header_font_google = google_font("Noto Serif"),
+  header_font_google = google_font("Newsreader", 300),
   text_font_google   = google_font("Lato", 300),
   text_font_size = "1.4rem",
   title_slide_background_image = "demosocBG.png",
