@@ -33,8 +33,8 @@ knitr::opts_chunk$set(
 library(xaringanthemer)
 style_mono_accent(
   base_color = "#353889",
-  header_font_google = google_font("Lara",100),
-  text_font_google   = google_font("Lato", 300, 300i),
+  header_font_google = google_font("Lora"),
+  text_font_google   = google_font("Lato", 300),
   text_font_size = "1.4rem",
   title_slide_background_image = "demosocBG.png",
   text_color = "#05050d"
@@ -63,7 +63,7 @@ use_logo(
 
 ---
 
-## Framework: Far right
+## Framework: Far Right
 
 - We are now in the fourth wave of the rise of the far right in Europe (Mudde 2019).
 
@@ -75,7 +75,7 @@ use_logo(
 
 ---
 
-## Framework: Contact theory
+## Framework: Contact Theory
 
 - There is a very large literature that direct contact reduces prejudice (Pettigrew et al. 2011).
 
@@ -89,7 +89,7 @@ use_logo(
 
 ---
 
-## Framework: Urban theory
+## Framework: Urban Theory
 
 - Modernist design trends inserted openness into previously continuous urban fabric throughout the 20th century.
 
