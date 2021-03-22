@@ -33,8 +33,8 @@ knitr::opts_chunk$set(
 library(xaringanthemer)
 style_mono_accent(
   base_color = "#353889",
-  header_font_google = google_font("Newsreader", 300),
-  text_font_google   = google_font("Lato", 300),
+  header_font_google = google_font("Lara",100),
+  text_font_google   = google_font("Lato", 300, 300i),
   text_font_size = "1.4rem",
   title_slide_background_image = "demosocBG.png",
   text_color = "#05050d"
@@ -115,7 +115,7 @@ use_logo(
 
 - Vox is very similar to other radical-right parties in Europe, especially in its anti-immigrant and anti-feminism stances (Gould 2019, Arcila Calderón et al. 2020, Bernardez-Rodal et al. 2020).
 
-- At the individual level, data comes from 12 pooled CIS barometer surveys from January 2019 to March 2020, which ask respondents how likely they are to support Vox on a 0 (never) to 10 (always) scale. The dichotomous outcome variable treats response 1-10 as </i>sympathy for the far right</i>.
+- At the individual level, data comes from 12 pooled CIS barometer surveys from January 2019 to March 2020, which ask respondents how likely they are to support Vox on a 0 (never) to 10 (always) scale. The dichotomous outcome variable treats response 1-10 as *sympathy for the far right*.
 
 - City-level data is provided by Eurostat.
 
