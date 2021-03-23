@@ -71,7 +71,7 @@ use_logo(
 
 - These same hypotheses have been applied to the social context, operationalized as unemployment rates and migrant populations (e.g.  Georgiadou et al. 2018).
 
-- Most of the literature stays within this competition framework, though there are interesting exceptions (e.g. Bolet 2021).
+- Most of the literature stays within this framework, though there are interesting exceptions (e.g. Bolet 2021).
 
 ---
 
@@ -111,7 +111,7 @@ use_logo(
 
 ## Case Selection & Data
 
-- I study a single country, to reduce variation in political context and maximize data availability and consistency.
+- I study a single country, to reduce variation in political context and maximize data availability and consistency. Spain is ideal.
 
 - Vox is very similar to other radical-right parties in Europe, especially in its anti-immigrant and anti-feminism stances (Gould 2019, Arcila Calderón et al. 2020, Bernardez-Rodal et al. 2020).
 
