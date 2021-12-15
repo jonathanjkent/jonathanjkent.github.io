@@ -6,16 +6,30 @@ output: html_document
 ```{r setup, echo=FALSE}
 library(tidyverse)
 library(sf)
+library(readxl)
+library(janitor)
+library(progress)
 library(flowmapblue)
 token <- "pk.eyJ1Ijoiam9uYXRoYW5qa2VudCIsImEiOiJja3g3Z3F4Mm0wOTBuMnZuMzExZjg0enB3In0.yAhy3SCJMtYkfgpBGDbrKQ"
 
-d <- read_rds("~/GoogleDrive/PhD/Paper Three/ine_barri_mobility.rds")
+setwd("~/GoogleDrive/Data/INE Mobility")
+files <- list.files(pattern = "Tabla 1.4", recursive = TRUE)
+
+munis <- c("Barcelona","Hospitalet de LLobregat","Badalona","Sant Adrià de Besòs","Santa Coloma de Gramenet")
+
+for (i in 1:length(files)){
+  if(i!=97){
+    temp <- read_xlsx(files[i]) %>% clean_names() %>% filter(str_detect(nombre_area_de_destino, paste(munis,collapse = "|")) & str_detect(nombre_area_de_residencia, paste(munis,collapse = "|"))) %>% mutate(data = as.Date(paste0(str_sub(str_remove(files[i],"/Tabla.*"),-4,-1),"-",str_sub(files[i],-7,-6),"-",str_sub(files[i],-9,-8)))) %>% mutate(dia = weekdays(data)) %>% select(-starts_with("comunidad"),-starts_with("provincia")) %>% rename(flujo = flujo_origen_destino_no_de_personas)
+    names(temp) <- str_remove_all(names(temp),"_area_de")
+    if (i == 1){d <- temp} else {d <- bind_rows(d,temp)}
+  }
+}
 
 map <- st_read("~/GoogleDrive/Data/INE Mobility/Supporting Info/shapefiles_ reas_movilidad/Shapefile_celdas_marzo_2020/celdas_marzo_2020.shp") %>% filter(ID_GRUPO %in% unique(d$codigo_destino)) %>% st_centroid() %>% st_transform("+proj=longlat +ellps=WGS84 +datum=WGS84") 
 
 locations <- d %>% select(codigo_destino,nombre_destino) %>% unique() %>% rename(id = codigo_destino, name = nombre_destino) %>% left_join(tibble(id = map$ID_GRUPO, lat = st_coordinates(map)[,2], lon = st_coordinates(map)[,1]))
 
-flows.sun <- d %>% filter(dia == "Sunday" & codigo_residencia != codigo_destino) %>% group_by(codigo_residencia,codigo_destino) %>% summarise(count = sum(flujo)) %>% rename(origin = codigo_residencia, dest = codigo_destino)
+flows.sun <- d %>% filter(dia == "Sunday" & codigo_residencia != codigo_destino) %>% group_by(codigo_residencia,codigo_destino) %>% summarise(count = mean(flujo)) %>% rename(origin = codigo_residencia, dest = codigo_destino)
 
 flowmapblue(locations, flows.sun, token, clustering = T, darkMode = T, animation = F)
 ```
