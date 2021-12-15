@@ -1,7 +1,5 @@
 ---
-title: "BCN Flow Map - Sundays"
-subtitle: "Human Mobility Data from INE for June 2020 to October 2021"
-author: "Jonathan Kent"
+title: "Sundays - BCN Human Mobility"
 output: html_document
 ---
 
@@ -18,8 +16,6 @@ map <- st_read("~/GoogleDrive/Data/INE Mobility/Supporting Info/shapefiles_ rea
 locations <- d %>% select(codigo_destino,nombre_destino) %>% unique() %>% rename(id = codigo_destino, name = nombre_destino) %>% left_join(tibble(id = map$ID_GRUPO, lat = st_coordinates(map)[,2], lon = st_coordinates(map)[,1]))
 
 flows.sun <- d %>% filter(dia == "Sunday" & codigo_residencia != codigo_destino) %>% group_by(codigo_residencia,codigo_destino) %>% summarise(count = sum(flujo)) %>% rename(origin = codigo_residencia, dest = codigo_destino)
-
-#flows.wed <- d %>% filter(dia == "Wednesday" & codigo_residencia != codigo_destino) %>% group_by(codigo_residencia,codigo_destino) %>% summarise(count = sum(flujo)) %>% rename(origin = codigo_residencia, dest = codigo_destino)
 
 flowmapblue(locations, flows.sun, token, clustering = T, darkMode = T, animation = F)
 ```
