@@ -8,6 +8,7 @@ get.words <- function(language){
   if (language == "EN"){
     download.file("http://www.gwicks.net/textlists/usa.zip", words <- tempfile())
     words <- read_lines(words) %>% stri_trans_general("Latin-ASCII") %>% toupper() %>% unique()
+    words <- words[str_detect(words,"^[:upper:]+$")]
     words <- words[str_length(words)==5]
   }
   if (language == "CAT"){
@@ -17,11 +18,13 @@ get.words <- function(language){
   if (language == "ES"){
     download.file("http://www.gwicks.net/textlists/espanol.zip", words <- tempfile())
     words <- read_lines(words) %>% stri_trans_general("Latin-ASCII") %>% toupper() %>% unique()
+    words <- words[str_detect(words,"^[:upper:]+$")]
     words <- words[str_length(words)==5]
   }
   if (language == "FR"){
     download.file("http://www.gwicks.net/textlists/francais.zip", words <- tempfile())
     words <- read_lines(words) %>% stri_trans_general("Latin-ASCII") %>% toupper() %>% unique()
+    words <- words[str_detect(words,"^[:upper:]+$")]
     words <- words[str_length(words)==5]
   }
   return(words)
@@ -34,10 +37,13 @@ words <- get.words("EN") # EN, CAT, ES, FR
 # Create wordle function
 
 wordle <- function(word, colors){
-  
+
   if (str_length(word) != 5) {stop("Word must be 5 letters.")}
   if (str_length(colors) != 5) {stop("Must have 5 colors.")}
   if ((str_remove_all(str_remove_all(str_remove_all(colors,"y"),"g"),"x")) != "") {stop("Check colors: only y g & x are valid.")}
+  
+  word <- toupper(word)
+  colors <- tolower(colors)
   
   ys <- str_which(unlist(str_split(colors,"")),"y")
   gs <- str_which(unlist(str_split(colors,"")),"g")
