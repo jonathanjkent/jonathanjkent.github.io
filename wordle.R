@@ -1,5 +1,6 @@
 library(tidyverse)
 library(stringr)
+library(stringi)
 
 #### Pick English, Catalan, Spanish or French and download list of 5 letter words ####
 
