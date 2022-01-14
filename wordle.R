@@ -1,27 +1,32 @@
 library(tidyverse)
 library(stringr)
 
-#### Pick English, Catalan, or Spanish and download list of 5 letter words ####
+#### Pick English, Catalan, Spanish or French and download list of 5 letter words ####
 
 get.words <- function(language){
   if (language == "EN"){
     download.file("http://www.gwicks.net/textlists/usa.zip", words <- tempfile())
-    words <- read_lines(words)
-    words <- toupper(unique(words[str_length(words)==5]))
+    words <- read_lines(words) %>% stri_trans_general("Latin-ASCII") %>% toupper() %>% unique()
+    words <- words[str_length(words)==5]
   }
   if (language == "CAT"){
-    words <- read_delim("https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/master/resultats/lt/diccionari.txt", delim = " ", col_names = F, col_types = cols()) %>% filter(str_detect(X1,"^[:lower:]+$") & str_length(X1) == 5)
-    words <- toupper(unique(stri_trans_general(words$X1, "Latin-ASCII")))
+    words <- read_delim("https://raw.githubusercontent.com/Softcatala/catalan-dict-tools/master/resultats/lt/diccionari.txt", delim = " ", col_names = F, col_types = cols()) %>% filter(str_detect(X1,"^[:lower:]+$") & str_length(X1) == 5) 
+    words <- stri_trans_general(words$X1, "Latin-ASCII") %>% toupper() %>% unique()
   }
   if (language == "ES"){
     download.file("http://www.gwicks.net/textlists/espanol.zip", words <- tempfile())
-    words <- read_lines(words)
-    words <- toupper(unique(words[str_length(words)==5]))
+    words <- read_lines(words) %>% stri_trans_general("Latin-ASCII") %>% toupper() %>% unique()
+    words <- words[str_length(words)==5]
+  }
+  if (language == "FR"){
+    download.file("http://www.gwicks.net/textlists/francais.zip", words <- tempfile())
+    words <- read_lines(words) %>% stri_trans_general("Latin-ASCII") %>% toupper() %>% unique()
+    words <- words[str_length(words)==5]
   }
   return(words)
 }
 
-words <- get.words("EN") # EN, CAT or ES
+words <- get.words("EN") # EN, CAT, ES, FR
 
 #### Play (more fun to check after playing, cheater) ####
 
