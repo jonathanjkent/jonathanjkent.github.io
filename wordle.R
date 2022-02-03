@@ -32,6 +32,9 @@ get.words <- function(language){
 
 words <- get.words("EN") # EN, CAT, ES, FR
 
+# word.scores <- read_rds("~/Documents/wordle_scores.rds") %>% unique() %>% arrange(desc(index))
+# words <- word.scores$word
+
 #### Play (more fun to check after playing, cheater) ####
 
 # Create wordle function
