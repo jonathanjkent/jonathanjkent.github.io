@@ -289,13 +289,14 @@ pre code {
 <div id="which-model-provides-the-best-predictions-for-new-cities" class="section level3">
 <h3>Which model provides the best predictions for new cities?</h3>
 <p>The chart below reports the RMSE of predictions for each of the ten cities. The given city was treated as the “test” data while the other nine served as the “train” data, repeated for each one. The Madrid, Bilbao, and Malaga variables ranked highly in importance above, which indicates that those cities are particularly distinct in their mobility patterns, so I would expect the models to struggle with them. Also, RF struggles to make predictions for out-of-sample values, so I expect the linear model may do better with the larger cities.</p>
-<pre><code>## # A tibble: 3 × 5
+<pre><code>## # A tibble: 4 × 5
 ##   city      var_imp_rank rmse_rf rmse_lm better_predictions
 ##   &lt;chr&gt;            &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;             
 ## 1 Barcelona            9    86.3    67.3 LM ***            
-## 2 Sevilla              7   108.    114.  RF ***            
-## 3 Madrid               1   112.     75.1 LM ***</code></pre>
-<p>ANALYSIS TO COME, WAITING FOR RESULTS FROM SEVEN OTHER CITIES</p>
+## 2 Valencia             8   103.    116.  RF ***            
+## 3 Sevilla              7   108.    114.  RF ***            
+## 4 Madrid               1   112.     75.1 LM ***</code></pre>
+<p>ANALYSIS TO COME, WAITING FOR RESULTS FROM REMAINING CITIES</p>
 </div>
 <div id="when-mapped-are-there-substantive-difference-between-the-model-predictions" class="section level3">
 <h3>When mapped, are there substantive difference between the model predictions?</h3>
