@@ -11,7 +11,7 @@
 
 <meta name="author" content="Jonathan Kent" />
 
-<meta name="date" content="2022-02-04" />
+<meta name="date" content="2022-02-05" />
 
 <title>Modeling Urban Mobility with Random Forest Regression</title>
 
@@ -167,7 +167,7 @@ pre code {
 
 <h1 class="title toc-ignore">Modeling Urban Mobility with Random Forest Regression</h1>
 <h4 class="author">Jonathan Kent</h4>
-<h4 class="date">February 04, 2022</h4>
+<h4 class="date">February 05, 2022</h4>
 
 </div>
 
@@ -290,31 +290,33 @@ pre code {
 <div id="which-model-provides-the-best-predictions-for-new-cities-and-why" class="section level3">
 <h3>Which model provides the best predictions for new cities (and why)?</h3>
 <p>The chart below reports the RMSE of predictions for each of the ten cities. The given city was treated as the “test” data while the other nine served as the “train” data, repeated for each one. The Madrid, Bilbao, and Malaga variables ranked highly in importance above, which indicates that those cities are particularly distinct in their mobility patterns, so I would expect the models to struggle with them. Also, RF struggles to make predictions for out-of-sample values, so I expect the linear model may do better with the larger cities.</p>
-<pre><code>## # A tibble: 9 × 4
-##   city                       rmse_rf rmse_lm better_predictions
-##   &lt;chr&gt;                        &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;             
-## 1 Barcelona                     86.3    67.3 &quot;LM ***&quot;          
-## 2 Madrid                       112.     75.1 &quot;LM ***&quot;          
-## 3 Valencia                     103.    116.  &quot;RF ***&quot;          
-## 4 Sevilla                      108.    114.  &quot;RF ***&quot;          
-## 5 Cordoba                      114.    110.  &quot;LM **&quot;           
-## 6 Zaragoza                     114.    113.  &quot;LM &quot;             
-## 7 Las Palmas de Gran Canaria   138.    145.  &quot;RF ***&quot;          
-## 8 Malaga                       254.    276.  &quot;RF ***&quot;          
-## 9 Bilbao                       281.    306.  &quot;RF ***&quot;</code></pre>
+<pre><code>## # A tibble: 10 × 4
+##    city                       rmse_rf rmse_lm better_predictions
+##    &lt;chr&gt;                        &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;             
+##  1 Barcelona                     86.3    67.3 &quot;LM ***&quot;          
+##  2 Madrid                       112.     75.1 &quot;LM ***&quot;          
+##  3 Valencia                     103.    116.  &quot;RF ***&quot;          
+##  4 Sevilla                      108.    114.  &quot;RF ***&quot;          
+##  5 Cordoba                      114.    110.  &quot;LM **&quot;           
+##  6 Zaragoza                     114.    113.  &quot;LM &quot;             
+##  7 Las Palmas de Gran Canaria   138.    145.  &quot;RF ***&quot;          
+##  8 Palma de Mallorca            260.    265.  &quot;RF &quot;             
+##  9 Malaga                       254.    276.  &quot;RF ***&quot;          
+## 10 Bilbao                       281.    306.  &quot;RF ***&quot;</code></pre>
 <p>Considering the difference in data used and computing time required, the random forest predictions are disappointing. The most well-known disadvantage of RF is that it struggles to make predictions for out-of-sample values. Perhaps the cities where LM prevails are those which have more variables with maxs or mins outside of the training set.</p>
-<pre><code>## # A tibble: 9 × 4
-##   city                       oos_vars oos_var_importance better_predictions
-##   &lt;chr&gt;                         &lt;dbl&gt;              &lt;dbl&gt; &lt;chr&gt;             
-## 1 Madrid                           16              579.  &quot;LM ***&quot;          
-## 2 Barcelona                        18              554.  &quot;LM ***&quot;          
-## 3 Zaragoza                          6              283.  &quot;LM &quot;             
-## 4 Cordoba                           6              269.  &quot;LM **&quot;           
-## 5 Sevilla                           8              226.  &quot;RF ***&quot;          
-## 6 Malaga                            4              118.  &quot;RF ***&quot;          
-## 7 Las Palmas de Gran Canaria        2               29.1 &quot;RF ***&quot;          
-## 8 Valencia                          2               22.9 &quot;RF ***&quot;          
-## 9 Bilbao                            0                0   &quot;RF ***&quot;</code></pre>
+<pre><code>## # A tibble: 10 × 4
+##    city                       oos_vars oos_var_importance better_predictions
+##    &lt;chr&gt;                         &lt;dbl&gt;              &lt;dbl&gt; &lt;chr&gt;             
+##  1 Madrid                           16              579.  &quot;LM ***&quot;          
+##  2 Barcelona                        18              554.  &quot;LM ***&quot;          
+##  3 Palma de Mallorca                 5              314.  &quot;RF &quot;             
+##  4 Zaragoza                          6              283.  &quot;LM &quot;             
+##  5 Cordoba                           6              269.  &quot;LM **&quot;           
+##  6 Sevilla                           8              226.  &quot;RF ***&quot;          
+##  7 Malaga                            4              118.  &quot;RF ***&quot;          
+##  8 Las Palmas de Gran Canaria        2               29.1 &quot;RF ***&quot;          
+##  9 Valencia                          2               22.9 &quot;RF ***&quot;          
+## 10 Bilbao                            0                0   &quot;RF ***&quot;</code></pre>
 <p>The accuracy of the random forest predictions seems to be directly related to the importance of variables which have out-of-sample values in the test data.</p>
 </div>
 <div id="when-mapped-are-there-substantive-difference-between-the-model-predictions" class="section level3">
