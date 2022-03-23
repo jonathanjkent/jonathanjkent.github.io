@@ -204,8 +204,8 @@ Test of scenario in which researcher can only afford to purchase a subset of the
 ## Thank you!
 
 **Data Sources**
-- INE Mobility Data: https://ine.es/experimental/movilidad/experimental_em.htm
-- Urban Atlas Data: https://land.copernicus.eu/local/urban-atlas/
+- INE Mobility: https://ine.es/experimental/movilidad/experimental_em.htm
+- Urban Atlas: https://land.copernicus.eu/local/urban-atlas/
 
 **R Packages**
 - `ranger`: https://cran.r-project.org/web/packages/ranger/ranger.pdf
