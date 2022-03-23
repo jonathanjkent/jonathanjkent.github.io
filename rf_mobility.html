@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Predicting Urban Human Mobility with Random Forests and Land Cover Data</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Jonathan Kent | March 29, 2020" />
+    <script src="libs/header-attrs-2.13/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer_vox.css" type="text/css" />
+    <link rel="stylesheet" href="xaringan-title_vox.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Predicting Urban Human Mobility with Random Forests and Land Cover Data
+### Jonathan Kent | March 29, 2020
+
+---
+
+
+class: full-slide-fig
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 242px;
+height: 39px;
+z-index: 0;
+background-image: url(https://waronimmigrants.github.io/images/demosoc_logo.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+## Starting Point
+
+**Problem**
+- Very popular gravity model of mobility (Zipf, 1946) is elegant and simple but not very accurate.
+
+**Opportunity**
+- Abundance of new and underutilized data with machine learning models to take advantage.
+
+**Objective**
+- Develop a relatively simple, easy, and fast model that improves on the gravity model.
+
+---
+
+## Approach
+
+**Underutilized predictor data**
+- Land cover data from the Copernicus Urban Atlas.
+
+**Fast and easy machine learning**
+- Random forests using the `ranger` R package.
+
+**New mobility data for testing**
+- INE data from over 40 million mobile phones.
+
+---
+
+## Predictor Data: Copernicus Urban Atlas
+
+&lt;img src="ua_data.png" width="85%" style="display: block; margin: auto;" /&gt;
+Land cover types in the Girona FUA. Source: Copernicus Urban Atlas 2018
+
+---
+
+## Maching Learning: Random Forests
+
+&lt;img src="rf_diagram.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Outcome Data: Instituto Nacional de Estadística 
+
+&lt;img src="ine_data.png" width="85%" style="display: block; margin: auto;" /&gt;
+Average daily mobility flows for Nov. 18-21, 2019. Source: INE Experimental Statistics  
+
+---
+
+## Methods: Models
+
+**Gravity**
+- Linear model of flows with distance and population of origin/dest as predictors. 
+- All variables are on the log scale.
+
+**Random Forest**
+- Includes distance, population, and all land cover variables for origin/dest as predictors.
+- 500 trees, 19 variables per tree, 5 observations per terminal node. 
+
+**Gravity Plus**
+- Same as gravity model but with all land cover variables as additional predictors.
+
+---
+
+## Methods: Key Tasks in Human Mobility Modelling
+
+**Individual-level path prediction/generation**
+- Modelling the trajectories of individuals, outside the scope of this paper.
+
+**Aggregated flow prediction**
+- Predicting counts of movement between areas using historic data.
+
+**Aggregated flow generation**
+- Generating estimated counts of movement between areas *without* using historic data.
+
+(Luca et al., 2021)
+
+---
+
+## Methods: Model Comparison Metrics
+
+**Root Mean of Squared Errors**
+- Popular for comparing predictions generally but not specific to mobility.
+
+**Common Part of Commuters**
+- Most popular metric in the literature for this purpose.
+- Approximately equal to the percentage of movements accurately predicted.
+
+&lt;img src="cpc.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Findings: Variable Importance
+
+&lt;img src="var_import.png" width="85%" style="display: block; margin: auto;" /&gt;
+Variable importance in baseline random forest model with 2019 data.
+
+---
+
+## Findings: Random Flow Generation
+
+&lt;img src="years_both_metrics.png" width="85%" style="display: block; margin: auto;" /&gt;
+Tests using data subset by year with random training (80%) and test (20%) sets.
+
+---
+
+## Findings: Real World Flow Prediction
+
+&lt;img src="malaga_future.png" width="85%" style="display: block; margin: auto;" /&gt;
+Observed and predicted flows for Málaga in 2021 using data from 2019.
+
+---
+
+## Findings: Real World Flow Generation
+
+&lt;img src="new_cities.png" width="85%" style="display: block; margin: auto;" /&gt;
+Prediction quality for each city using data from the 38 other cities.
+
+---
+
+## Findings: Real World Flow Generation
+
+&lt;img src="alicant_new.png" width="85%" style="display: block; margin: auto;" /&gt;
+Observed and generated flows for Alicante using data from the 38 other cities.
+
+---
+
+## Findings: Real World Flow Generation
+
+&lt;img src="buy_cities.png" width="85%" style="display: block; margin: auto;" /&gt;
+Test of scenario in which researcher can only afford to purchase a subset of the data.
+
+---
+
+## Thank you!
+
+**Data Sources**
+- INE Mobility Data: https://ine.es/experimental/movilidad/experimental_em.htm
+- Urban Atlas Data: https://land.copernicus.eu/local/urban-atlas/
+
+**R Packages**
+- `ranger`: https://cran.r-project.org/web/packages/ranger/ranger.pdf
+- `sf`: https://r-spatial.github.io/sf/
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

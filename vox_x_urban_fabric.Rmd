@@ -5,8 +5,8 @@ author: "Jonathan Kent | March 23, 2021"
 output:
   xaringan::moon_reader:
     css: 
-      - xaringan-themer.css
-      - xaringan-title.css
+      - xaringan-themer_vox.css
+      - xaringan-title_vox.css
     lib_dir: libs
     nature:
       highlightStyle: github
