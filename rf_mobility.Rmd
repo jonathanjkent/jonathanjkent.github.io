@@ -1,11 +1,11 @@
 ---
 title: "Predicting Urban Human Mobility with Random Forests and Land Cover Data"
-author: "Jonathan Kent | March 29, 2020"
+author: "Jonathan Kent | March 29, 2022"
 output:
   xaringan::moon_reader:
     css: 
-      - xaringan-themer_vox.css
-      - xaringan-title_vox.css
+      - xaringan-themer-demosoc.css
+      - xaringan-title-demosoc.css
     lib_dir: libs
     nature:
       highlightStyle: github
