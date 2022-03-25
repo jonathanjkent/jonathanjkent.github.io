@@ -68,11 +68,11 @@ use_logo(
 **Underutilized predictor data**
 - Land cover data from the Copernicus Urban Atlas.
 
-**Fast and easy machine learning**
-- Random forests using the `ranger` R package.
-
 **New mobility data for testing**
 - INE data from over 40 million mobile phones.
+
+**Fast and easy machine learning**
+- Random forests using the `ranger` R package.
 
 ---
 
@@ -85,20 +85,20 @@ Land cover types in the Girona FUA. Source: Copernicus Urban Atlas 2018
 
 ---
 
-## Maching Learning: Random Forests
-
-``` {r}
-knitr::include_graphics("rf_diagram.png")
-```
-
----
-
 ## Outcome Data: Instituto Nacional de Estadística 
 
 ``` {r}
 knitr::include_graphics("ine_data.png")
 ```
 Average daily mobility flows for Nov. 18-21, 2019. Source: INE Experimental Statistics  
+
+---
+
+## Maching Learning: Random Forests
+
+``` {r}
+knitr::include_graphics("rf_diagram.png")
+```
 
 ---
 
