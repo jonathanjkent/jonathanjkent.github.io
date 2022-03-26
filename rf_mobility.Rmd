@@ -188,7 +188,7 @@ Prediction quality for each city using data from the 38 other cities.
 ``` {r}
 knitr::include_graphics("alicant_new.png")
 ```
-Observed and generated flows for Alicante using data from the 38 other cities.
+Observed and generated flows for Alicant using data from the 38 other cities.
 
 ---
 
