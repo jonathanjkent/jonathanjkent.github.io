@@ -202,7 +202,7 @@ pre code {
 </div>
 <div id="model-progression" class="section level2">
 <h2>Model Progression</h2>
-<p>I include the region-level variables progressively. Model 1 has only the two migrant population ratio variables. It suggests that Europeans are happy when integration brings other Europeans to their region, but less happy when non-Europeans arrive.</p>
+<p>Here are a bunch of visualizations of the ordinal models I have run so far. I include the region-level variables progressively. Model 1 has only the two migrant population ratio variables. It suggests that Europeans are happy when integration brings other Europeans to their region, but less happy when non-Europeans arrive.</p>
 <pre class="r"><code>m1 %&gt;%
   spread_draws(b_scalepct_eu_only, b_scalepct_non_eu) %&gt;%
   select(-starts_with(&quot;.&quot;)) %&gt;% 
