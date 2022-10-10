@@ -163,5 +163,5 @@ knitr::include_graphics("flow_chart.png")
 - Attempt to disentangle EU/non-EU vs. cultural similarity question
 
 **Consider heterogeneous effects**
-- By education or class on population and/or interaction terms
+- By education, class, etc. on population and/or interaction terms
 
