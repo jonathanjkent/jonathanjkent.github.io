@@ -140,15 +140,15 @@ knitr::include_graphics("conditional_effects.png")
 
 ## Early conclusions
 
-- Link between migrant population dynamics and EU opinions is clearer when considering EU-born migrants
+- Link between migrant population dynamics and EU opinions is clearer when considering EU-born migrants.
 
 ``` {r}
 knitr::include_graphics("flow_chart.png")
 ```
 
-- Contact theory appears to better explain our findings for EU-born migrants
+- Contact theory appears to better explain our findings for EU-born migrants.
 
-- Segregation is a moderator of the relationship between population size and attitudes
+- Segregation is a moderator of the relationship between population size and attitudes.
 
 ---
 
