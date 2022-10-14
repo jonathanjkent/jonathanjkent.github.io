@@ -72,7 +72,7 @@ use_logo(
 - Contact between in-group and out-group members can reduce prejudicial attitudes, especially in certain conditions. 
 - Theory implies that large out-group populations should face less prejudice (due to increased contact with out-groups), though segregation would likely weaken this effect.
 
-**Better understanding of conditions like segregation by help untangle this "paradox"**
+**Better understanding of conditions like segregation can help untangle this "paradox"**
 
 
 ---
@@ -100,6 +100,14 @@ use_logo(
 **Voting behavior dataset: NUTS-3 level**
 - DV: % vote for pro-EU parties for European Parliament in 2014 (EU-NED & PopuList).
 - Population dynamic variables at the NUTS-3 level.
+
+---
+
+## Initial hypotheses
+
+- H1: Greater levels of spatial segregation between migrants and natives are associated with more negative attitudes towards European integration
+
+- H2: The relationship between levels of spatial segregation and an individual’s attitudes towards the European integration is conditioned by the level and the type of spatial segregation (non-EU vs EU)
 
 ---
 
