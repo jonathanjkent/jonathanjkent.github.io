@@ -21,7 +21,7 @@ Also inspired by a Friday seminar conversation, I use negative binomial models w
 ## Premier League
 
 ```{r eng}
-d <- read_rds("~/GoogleDrive/Futbol/leads_data_eng1.rds") %>% filter(match != "/en/matches/") %>% mutate(date = mark::str_extract_date(match, format = "%B-%d-%Y"), match = ifelse(is.na(date),paste0(str_sub(match,1,-22),0,str_sub(match,-21,-1)),match), date = mark::str_extract_date(match, format = "%B-%d-%Y"), minute = as.numeric(gsub("\\D","",gsub("\\+.*","",minute))), home.score = as.numeric(home.score), away.score = as.numeric(away.score))
+d <- read_rds("~/GoogleDrive/Futbol/leads_data_eng1.rds") %>% filter(match != "/en/matches/") %>% mutate(minute = as.numeric(gsub("\\D","",gsub("\\+.*","",minute))), home.score = as.numeric(home.score), away.score = as.numeric(away.score))
 
 preds <- tibble(minute = as.double(), pred = as.double(), lead = as.character(), model = as.character())
 
@@ -51,7 +51,7 @@ In the plot above, the points represent the percentage of leads lost aggregated 
 ## Bundesliga
 
 ```{r ger}
-d <- read_rds("~/GoogleDrive/Futbol/leads_data_ger1.rds") %>% filter(match != "/en/matches/") %>% mutate(date = mark::str_extract_date(match, format = "%B-%d-%Y"), match = ifelse(is.na(date),paste0(str_sub(match,1,-22),0,str_sub(match,-21,-1)),match), date = mark::str_extract_date(match, format = "%B-%d-%Y"), minute = as.numeric(gsub("\\D","",gsub("\\+.*","",minute))), home.score = as.numeric(home.score), away.score = as.numeric(away.score))
+d <- read_rds("~/GoogleDrive/Futbol/leads_data_ger1.rds") %>% filter(match != "/en/matches/") %>% mutate(minute = as.numeric(gsub("\\D","",gsub("\\+.*","",minute))), home.score = as.numeric(home.score), away.score = as.numeric(away.score))
 
 preds <- tibble(minute = as.double(), pred = as.double(), lead = as.character(), model = as.character())
 
@@ -133,7 +133,7 @@ preds_nfl <- preds %>% mutate(league = "nfl")
 
 What about sports with an entirely different scoring system? Here, I treat touchdowns (or touchdown-sized leads) as the equivalent to goals. So, a 1 score lead is a 7 point lead and so on. Otherwise, the method is the same.
 
-## Comparing the Sports 
+## Comparing sports 
 
 ```{r compare1}
 print(bind_rows(preds_eng,preds_ger,preds_nhl,preds_nfl) %>% mutate(lead = paste(str_sub(lead,1,1),"Score Lead"), pct_left = ifelse(league %in% c("eng","ger"),minute/90,minute/60), league = case_when(league == "eng" ~ "Soccer (Premier League)", league == "ger" ~ "Soccer (Bundesliga)", league == "nhl" ~ "Hockey (NHL)", league == "nfl" ~ "Am. Football (NFL)")) %>% ggplot(aes(pct_left,pred,color=league)) + geom_line(linewidth = 1.2) + facet_wrap(~lead) + theme_minimal() + labs(y = "Prob. of Losing Lead", x = "Time Elapsed (%) When Lead Reached", color = NULL) + theme(legend.position="bottom"))
@@ -149,3 +149,38 @@ print(ggplot() + geom_rect(aes(xmin = .17, xmax = .58, ymin = .09, ymax = .17), 
 
 Whereas in American football and hockey, the safety of a 2 score lead steadily progresses as time elapses, in soccer there is a plateau pattern that's especially clear in the Premier League data. Teams that gain a 2 goal lead in the 25th minute are barely more likely to lose that lead (12.9% in the EPL) than teams which went ahead by 2 just after halftime (11.6%). Surely a team with a 2 goal lead and less than 45 minutes to defend it should be in a substantially safer situation than a team with the same lead but 65 minutes left to defend it. Perhaps this is what makes 2 goal leads in soccer "dangerous." Either teams that take 2 goal leads in the middle of the first half rest on their laurels or teams that fall behind by 2 retain some psychological edge that keeps their hopes alive a bit longer.
 
+## Is there an equivalent to a 2 goal lead in other sports?
+
+```{r nba1}
+nba <- bind_rows(read_rds("~/GoogleDrive/Futbol/leads_data_nba_pt1.rds"),read_rds("~/GoogleDrive/Futbol/leads_data_nba_pt2.rds"))
+epl <- read_rds("~/GoogleDrive/Futbol/leads_data_eng1.rds") %>% filter(match != "/en/matches/") %>% mutate(minute = as.numeric(gsub("\\D","",gsub("\\+.*","",minute))), home.score = as.numeric(home.score), away.score = as.numeric(away.score)) %>% select(-contains("final"))
+```
+
+```{r nba2, echo=T}
+print(epl %>% bind_rows(tibble(match=unique(epl$match),home.score=0,away.score=0,minute=0)) %>% bind_rows(expand_grid(match=unique(epl$match),minute=1:90)) %>% arrange(match,minute) %>% fill(everything()) %>% mutate(margin = abs(home.score-away.score)) %>% group_by(margin) %>% count() %>% ungroup() %>% mutate(pct = n/sum(n), cum_pct = cumsum(pct)))
+
+print(nba %>% mutate(margin = abs(home_score-away_score)) %>% group_by(margin) %>% count() %>% ungroup() %>% mutate(pct = n/sum(n), cum_pct = cumsum(pct)) %>% filter(cum_pct > .75))
+```
+
+In the Premier League, 83.7% of the time the score margin is less than 2. In the NBA, 84% of the time the margin is less than 14. So, a 14+ point lead in the NBA is similar in frequency to a 2 goal lead. If we treat 14 point leads as equivalent then:
+
+```{r nba3}
+d <- nba %>% filter(minute<=48)
+
+h <- d %>% group_by(id) %>% mutate(lead = ifelse((home_score-away_score)>=14,1,0), tie = ifelse(home_score<=away_score,1,0), cum_tie = cumsum(tie)) %>% group_by(id,lead,cum_tie) %>% slice(1) %>% arrange(minute) %>% group_by(id) %>% mutate(lead = cumsum(lead)) %>% group_by(id,lead) %>% summarise(minute = min(minute), tie = max(tie)) %>% filter(lead > 0)
+a <- d %>% group_by(id) %>% mutate(lead = ifelse((away_score-home_score)>=14,1,0), tie = ifelse(away_score<=home_score,1,0), cum_tie = cumsum(tie)) %>% group_by(id,lead,cum_tie) %>% slice(1) %>% arrange(minute) %>% group_by(id) %>% mutate(lead = cumsum(lead)) %>% group_by(id,lead) %>% summarise(minute = min(minute), tie = max(tie)) %>% filter(lead > 0)
+t <- bind_rows(h,a)
+
+suppressWarnings(m1<-MASS::glm.nb(tie ~ minute,t))
+suppressWarnings(m2<-MASS::glm.nb(tie ~ minute + I(minute^2),t))
+suppressWarnings(m3<-MASS::glm.nb(tie ~ minute + I(minute^2) + I(minute^3),t))
+aic <- tibble(m=c("m1","m2","m3"),aic = c(AIC(m1),AIC(m2),AIC(m3))) %>% arrange(aic)
+m<-mget(aic$m[1])[[1]]
+preds <- tibble(minute=min(t$minute):max(t$minute)) %>% mutate(pred = exp(predict(m,.)), lead = "2 scores", model = aic$m[1], lead = ifelse(str_sub(lead,1,1)==1, str_sub(lead,1,-2),lead))
+
+preds_nba <- preds %>% mutate(league = "nba")
+
+d <- bind_rows(preds_eng,preds_ger,preds_nhl,preds_nfl,preds_nba) %>% filter(str_sub(lead,1,1) == 2) %>% mutate(pct_left = ifelse(league %in% c("eng","ger"),minute/90,ifelse(league == "nba",minute/48,minute/60)), league = case_when(league == "eng" ~ "Soccer (EPL)", league == "ger" ~ "Soccer (Bundesliga)", league == "nhl" ~ "Hockey (NHL)", league == "nfl" ~ "Am. Football (NFL)", league == "nba" ~ "Basketball (NBA)"))
+
+ggplot() + geom_line(data=d,aes(pct_left,pred,color=league),linewidth = 1.2) + theme_minimal() + labs(y = "Prob. of Losing Lead", x = 'Time Elapsed (%) When "2 Score" Lead Reached', color = NULL) + theme(legend.position="bottom") 
+```
