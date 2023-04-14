@@ -162,7 +162,7 @@ print(epl %>% bind_rows(tibble(match=unique(epl$match),home.score=0,away.score=0
 print(nba %>% mutate(margin = abs(home_score-away_score)) %>% group_by(margin) %>% count() %>% ungroup() %>% mutate(pct = n/sum(n), cum_pct = cumsum(pct)) %>% filter(cum_pct > .75))
 ```
 
-In the Premier League, 83.7% of the time the score margin is less than 2. In the NBA, 84% of the time the margin is less than 14. So, a 14+ point lead in the NBA is similar in frequency to a 2 goal lead. If we treat 14 point leads as equivalent then:
+In the Premier League, 83.7% of the time the score margin is less than 2. In the NBA, 84% of the time the margin is less than 14. So, a 14+ point lead in the NBA is similar in frequency to a 2 goal lead. By the same logic, two touchdown leads are indeed equivalent to two goal leads. If we treat 14 point NBA leads as equivalent, then:
 
 ```{r nba3}
 d <- nba %>% filter(minute<=48)
