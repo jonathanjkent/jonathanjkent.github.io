@@ -74,7 +74,7 @@ print(ggplot() + geom_vline(xintercept = 45, alpha = .5) + geom_line(data = pred
 preds_ger <- preds %>% mutate(league = "ger")
 ```
 
-The Bundesliga data is not yet complete (currently, a random sample of 2565 of the 9431 total games), which may explain the odd patterns for 3 goal leads and early 2 goal leads.
+The Bundesliga data is not yet complete (currently, a random sample of 4310 of the 9431 total games), which may explain the odd patterns for 3 goal leads and early 2 goal leads.
 
 ## National Hockey League
 
