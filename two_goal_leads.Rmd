@@ -1,7 +1,7 @@
 ---
 title: "Dangerous Two Goal Leads"
 output: html_document
-date: "`r format(Sys.time(), '%d %B, %Y')`"
+date: "`r format(Sys.time(), '%d %B %Y')`"
 ---
 
 ```{r setup, include=FALSE}
@@ -194,6 +194,8 @@ preds %>% mutate(control = ifelse(as.numeric(str_sub(model,2,2))>3,"Evenly Match
 ```
 
 To control for team strength, I calculate Elo scores for all Premier League games since 1992 with parameters optimized through testing (k = 16, home field advantage = 68, all clubs Elo scores regress by 5% between seasons). I repeat the original analysis but with models that control from team strength and, in the plot above, the predicted probabilities are for two evenly matched clubs. Unsurprisingly, the only substantive difference is that evenly matched opponents are more likely to eventually go level than in the unadjusted sample. Otherwise, the patterns remain the same.
+
+## The Danger Zone
 
 ```{r soccer3}
 means <- tibble(concede = as.double(), se = as.double(), lead = as.character(), next.mins = as.double())
