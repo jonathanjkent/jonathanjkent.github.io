@@ -445,6 +445,10 @@ And that is my final thought for social scientists. We know that geography matte
 
 ## {visibility="uncounted"}
 
+![](p1_table1.png){width="100%"}
+
+## {visibility="uncounted"}
+
 ![](p2_fig3.png){width="100%"}
 
 ## {visibility="uncounted"}
