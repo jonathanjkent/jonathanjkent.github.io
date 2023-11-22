@@ -5,7 +5,9 @@ author: "Jonathan Kent"
 format: revealjs
 editor: visual
 ---
+
 ## Urban Fabric Designed for Diversity
+
 ```{=html}
 <style>
 .container{
@@ -27,8 +29,6 @@ editor: visual
         }
         </style>
 ```
-
-
 -   Intro: Copernicus Urban Atlas
 -   Intro: Jane Jacobs' urban theory
 -   Paper 1: Urban fabric and attitudes toward foreigners
@@ -50,17 +50,15 @@ First, the data. Copernicus is a partnership between several European organizati
 
 ## (Dis)continuous Urban Fabric
 
-![](int_fig1.png){width="100%"}
-<font size="4">Continuous urban fabric in Barcelona (left) and discontinuous urban fabric in Berlin (right).</font>
+![](int_fig1.png){width="100%"} <font size="4">Continuous urban fabric in Barcelona (left) and discontinuous urban fabric in Berlin (right).</font>
 
 ::: notes
-Urban fabric is any area in a city with residential buildings, and whether or not it is continuous depends on how much of the land is artificially covered. If more than 80 percent is covered, it is continuous, if not it is discontinuous. On the left is continuous urban fabric here in Barcelona and on the right is Marzahn in Berlin. I love this Berlin image because it captures the two typical forms of discontinuous urban fabric. At the bottom we have a bunch of small residential buildings which each have their own green spaces, and at the top we have tall residential buildings which are spaced out even more and again separated by grass. 
+Urban fabric is any area in a city with residential buildings, and whether or not it is continuous depends on how much of the land is artificially covered. If more than 80 percent is covered, it is continuous, if not it is discontinuous. On the left is continuous urban fabric here in Barcelona and on the right is Marzahn in Berlin. I love this Berlin image because it captures the two typical forms of discontinuous urban fabric. At the bottom we have a bunch of small residential buildings which each have their own green spaces, and at the top we have tall residential buildings which are spaced out even more and again separated by grass.
 :::
 
 ## (Dis)continuous Urban Fabric
 
-![](int_map4.png){width="100%"}
-<font size="4">Urban fabric of Barcelona (left) and Berlin (right).</font>
+![](int_map4.png){width="100%"} <font size="4">Urban fabric of Barcelona (left) and Berlin (right).</font>
 
 ::: notes
 Those images were taken from Google Earth, and now we see the cities through the eyes of the Urban Atlas. Once again Barcelona is on the left and Berlin is on the right. And here, continuous urban fabric is in dark blue and discontinuous is in light blue. As you can see, the distribution of urban fabric can vary quite a bit. Going forward, when I refer to an urban fabric variable, I'm talking about the percentage of a city's urban fabric that is designated as continuous, which, for Barcelona, is 84 percent and for Berlin is 15 percent.
@@ -72,8 +70,8 @@ Philosophical and hygienic concerns about crowded cities
 
 Two modernist urban design trends rise in popularity:
 
-- Expand the city horizontally (Howard's "Garden City")
-- Expand the city vertically (Le Corbusier)
+-   Expand the city horizontally (Howard's "Garden City")
+-   Expand the city vertically (Le Corbusier)
 
 Either way: "grass, grass, grass" per Jane Jacobs
 
@@ -85,11 +83,10 @@ In order to explain why urban fabric might effect attitudes or behaviors, let me
 
 ::: container
 ::: col
-- Studied the impact of so-called urban renewal
-- Found that neighborhoods lost their "vitality"
-- Modern designs have less sidewalk activity
-- Less interaction between neighbors, more crime
-
+-   Studied the impact of so-called urban renewal
+-   Found that neighborhoods lost their "vitality"
+-   Modern designs have less sidewalk activity
+-   Less interaction between neighbors, more crime
 :::
 
 ::: col
@@ -98,14 +95,14 @@ In order to explain why urban fabric might effect attitudes or behaviors, let me
 :::
 
 ::: notes
-And the idea that existing urban fabric would be replaced isn't an exaggeration. Here you can see what was once the Gas House district in Manhattan as it was being replaced in the 1940s with a modernist development called Stuy Town. Jacobs studied the effect of these "urban renewal" projects and argued that the "vitality" of traditional designs was replaced by "dullness." She found that modern designs unintentionally discouraged human activity on sidewalks -- things like going for walks, people watching, standing around chatting, et cetera -- and, as a result, these neighborhoods have less interaction between neighbors and more crime. 
+And the idea that existing urban fabric would be replaced isn't an exaggeration. Here you can see what was once the Gas House district in Manhattan as it was being replaced in the 1940s with a modernist development called Stuy Town. Jacobs studied the effect of these "urban renewal" projects and argued that the "vitality" of traditional designs was replaced by "dullness." She found that modern designs unintentionally discouraged human activity on sidewalks -- things like going for walks, people watching, standing around chatting, et cetera -- and, as a result, these neighborhoods have less interaction between neighbors and more crime.
 :::
 
 ## Jacobs' Urban Theory
 
-- More activity and interaction in compact, traditional designs than in open, modern designs
-- Her claims have been echoed by other urban theorists and empirical work
-- The design trends she contrasts are very similar to the distinction Copernicus makes between continuous and discontinuous urban fabric
+-   More activity and interaction in compact, traditional designs than in open, modern designs
+-   Her claims have been echoed by other urban theorists and empirical work
+-   The design trends she contrasts are very similar to the distinction Copernicus makes between continuous and discontinuous urban fabric
 
 ::: notes
 Of course, Jacobs goes into much more detail about the mechanics of her theory than I will now, but she also makes it clear that her work shouldn't be read as hairsplitting but as an attack on modern designs as a whole. So, for our purposes, the key is that there is more interaction and activity in compact designs than open ones. And these days we have empirical evidence for this claim across a range of cultures and continents and even in contexts like suburbs where she claimed it would not apply. And fortunately -- but unintentionally, so far as I know -- the distinction she makes between traditional and modern designs is very similar to the distinction between continuous and discontinuous urban fabric in the Urban Atlas.
@@ -113,7 +110,7 @@ Of course, Jacobs goes into much more detail about the mechanics of her theory t
 
 ## 
 
-::: {.center-xy}
+::: center-xy
 <h2>Can Urban Fabric Encourage Tolerance?</h2>
 
 Published in *Cities* in 2022
@@ -124,30 +121,33 @@ So with that background out of the way, we are ready to get into how urban desig
 :::
 
 ## Paper 1: Contact Theory
-- Allport's contact hypothesis (1954)
-- Contact between in-groups and out-groups reduces prejudice
-- Four conditions: equal status, common goals, cooperative environment, societal support
-- Very large body of empirical evidence confirms the core idea and finds that the conditions are not necessary
+
+-   Allport's contact hypothesis (1954)
+-   Contact between in-groups and out-groups reduces prejudice
+-   Four conditions: equal status, common goals, cooperative environment, societal support
+-   Very large body of empirical evidence confirms the core idea and finds that the conditions are not necessary
 
 ::: notes
 So, we have reason to believe that urban design influences how often neighbors interact with each other, which means contact theory is relevant. Allport is famous for formalizing the theory that contact between in-groups and out-groups, like natives and foreigners, would reduce prejudice. He claimed that contact would be effective if four conditions were met, but empirical evidence has shown they aren't necessary just helpful. Hundreds of studies have confirmed that contact reduces prejudice in a wide variety of contexts and between a wide variety of in-group/out-group combinations.
 :::
 
 ## Paper 1: Contact Theory
-- Field has moved on to extensions of the theory
-- Extended contact: the friends of those who made contact
-- Vicarious contact: witnessing contact made by other people
-- Mere exposure: even interaction may not be necessary
-- Exciting implications at the scale of a city
+
+-   Field has moved on to extensions of the theory
+-   Extended contact: the friends of those who made contact
+-   Vicarious contact: witnessing contact made by other people
+-   Mere exposure: even interaction may not be necessary
+-   Exciting implications at the scale of a city
 
 ::: notes
-There is so much evidence supporting the theory that researchers have begun testing just how far the power of contact might extend. We now have evidence of positive effects for the friends of those who made contact, even if they did not themselves. Just witnessing in-group and out-group members interacting also reduces prejudice. And even merely being exposed to out-groups, without any interaction, improves attitudes. So in a diverse city with a lot of sidewalk activity, the implications of these indirect effects are really quite exciting. 
+There is so much evidence supporting the theory that researchers have begun testing just how far the power of contact might extend. We now have evidence of positive effects for the friends of those who made contact, even if they did not themselves. Just witnessing in-group and out-group members interacting also reduces prejudice. And even merely being exposed to out-groups, without any interaction, improves attitudes. So in a diverse city with a lot of sidewalk activity, the implications of these indirect effects are really quite exciting.
 :::
 
 ## Paper 1: Hypotheses
-- **H1**: The more continuous urban fabric in a city, the more likely individual residents will agree that foreigners are good for the city.
 
-- **H2**: The larger the migrant population in a city, the stronger the positive correlation between urban fabric continuity and positive attitudes toward foreigners.
+-   **H1**: The more continuous urban fabric in a city, the more likely individual residents will agree that foreigners are good for the city.
+
+-   **H2**: The larger the migrant population in a city, the stronger the positive correlation between urban fabric continuity and positive attitudes toward foreigners.
 
 ::: notes
 Everything we've talked about so far implies two hypotheses. If continuous urban fabric encourages interaction, and interaction improves attitudes towards out-groups then: "The more continuous urban fabric in a city, the more likely individual residents will agree that foreigners are good for the city." And if greater diversity increases the likelihood that those interactions take place between in-groups and out-groups then: "The larger the migrant population in a city, the stronger the positive correlation between urban fabric continuity and positive attitudes toward foreigners."
@@ -155,11 +155,11 @@ Everything we've talked about so far implies two hypotheses. If continuous urban
 
 ## Paper 1: Context & Data
 
-- 22 cities in Southern, Western, and Eastern Europe
-- City-level data from Eurostat including continuous urban fabric variable
-- Individual-level data from "Quality of Life in European Cities 2015" survey
-- DV question: agree/disagree that "the presence of foreigners is good for [city name]"
-- Controls: age, gender, nationality, education, occupation, economic variables, region in Europe
+-   22 cities in Southern, Western, and Eastern Europe
+-   City-level data from Eurostat including continuous urban fabric variable
+-   Individual-level data from "Quality of Life in European Cities 2015" survey
+-   DV question: agree/disagree that "the presence of foreigners is good for \[city name\]"
+-   Controls: age, gender, nationality, education, occupation, economic variables, region in Europe
 
 ::: notes
 For this paper, I wanted to be able to compare cities across Europe, which can be a challenge when you need some rather specific kinds of data. In the end, the data set included 22 cities from Southern, Western, and Eastern Europe. The city-level data all comes from Eurostat, including the percentage of urban fabric that is continuous. And I merged it with a Eurobarometer survey called "Quality of Life in European Cities" which asks respondents whether foreigners are good for their city and also includes various control variables.
@@ -167,8 +167,8 @@ For this paper, I wanted to be able to compare cities across Europe, which can b
 
 ## Paper 1: Models
 
-- Multilevel logistic regressions
-- Estimated with lme4 R package
+-   Multilevel logistic regressions
+-   Estimated with lme4 R package
 
 ::: notes
 I model the data using traditional multilevel logistic regression estimated in R with lme4, and I include random intercepts for city and fixed effects for region of Europe.
@@ -184,17 +184,17 @@ And here is what I found. These are beta coefficient estimates for the city-leve
 
 ## Paper 1: Takeaways
 
-- It does seem like urban fabric influences attitudes toward out-groups
-- I make a theoretical argument about the underlying mechanism, but the test of that mechanism fails
-- 22 cities is fewer than ideal
+-   It does seem like urban fabric influences attitudes toward out-groups
+-   I make a theoretical argument about the underlying mechanism, but the test of that mechanism fails
+-   22 cities is fewer than ideal
 
 ::: notes
 Here is what I took away from writing this paper. First, that my inclination seems to be correct that urban fabric continuity would have an influence on attitudes toward diversity. No one has ever used this data for anything like this purpose before, so that's pretty exciting itself. But the next big question is why. I lay out what I hope is a pretty convincing argument that this relationship can be explained by Jacobs and contact theory, but my attempt at testing that mechanism came up short. Also, it was disappointing that my data was whittled all the way down to just 22 cities. So next, I wanted to find a larger set of data in order to fix some of these issues and test what else urban fabric might be capable of.
 :::
 
-##
+## 
 
-::: {.center-xy}
+::: center-xy
 <h2>Does Urban Design Drive Sympathy for the Far Right?</h2>
 
 Published in *City, Culture and Society* in 2023
@@ -206,20 +206,20 @@ And that's just what I try to do in my second paper, which is called Does Urban 
 
 ## Paper 2: The Far Right in Europe
 
-- Far-right parties are now mainstream
-- Xenophobia and opposition to immigration are of "tremendous importance" to their ideology and rhetoric (Mudde, 2007)
-- They believe that "inequalities are natural and outside of the purview of the state" (Bobbio, 1996)
-- If urban design influences prejudice and tolerance, it may influence sympathy for the far right
-
+-   Far-right parties are now mainstream
+-   Xenophobia and opposition to immigration are of "tremendous importance" to their ideology and rhetoric (Mudde, 2007)
+-   They believe that "inequalities are natural and outside of the purview of the state" (Bobbio, 1996)
+-   If urban design influences prejudice and tolerance, it may influence sympathy for the far right
 
 ::: notes
-We can all remember, just a little while ago, that it was shocking when far right parties first began to win a few seats in European parliaments. But these days it is barely surprising when they get the plurality of votes in elections. This mainstreaming is what Mudde calls the fourth wave of the return of the far right. And he wrote that although they aren't single-issue parties, xenophobia and opposition to immigration are tremendously important to the far right. Bobbio put it even more simply, writing that the far right believes "inequalities are natural and outside the purview of the state." Given all that, it stands to reason that if urban design influences prejudice it might also influence sympathy for the far right. 
+We can all remember, just a little while ago, that it was shocking when far right parties first began to win a few seats in European parliaments. But these days it is barely surprising when they get the plurality of votes in elections. This mainstreaming is what Mudde calls the fourth wave of the return of the far right. And he wrote that although they aren't single-issue parties, xenophobia and opposition to immigration are tremendously important to the far right. Bobbio put it even more simply, writing that the far right believes "inequalities are natural and outside the purview of the state." Given all that, it stands to reason that if urban design influences prejudice it might also influence sympathy for the far right.
 :::
 
 ## Paper 2: Hypotheses
-- **H1**: Residents of cities with more continuous urban fabric will be less likely to have sympathy for far-right parties.
 
-- **H2**: The negative relationship between continuous urban fabric and far-right sympathy will be weaker in cities with high levels of residential segregation.
+-   **H1**: Residents of cities with more continuous urban fabric will be less likely to have sympathy for far-right parties.
+
+-   **H2**: The negative relationship between continuous urban fabric and far-right sympathy will be weaker in cities with high levels of residential segregation.
 
 ::: notes
 In the paper, of course, I lay out the full theory step-by-step, but most of it follows the same logic as the previous paper. If continuous urban fabric increases opportunities for interaction in diverse cities, and interaction reduces prejudice, then residents of cities with more continuous urban fabric will be less likely to have sympathy for far-right parties. That's Hypothesis 1. In this paper, I once again try to test if the mechanism I describe is the right one, but I do it in a different way. In the first paper I assumed that the QUANTITY of diversity would moderate the relationship between urban fabric and attitudes, but here I look to segregation instead. In segregated cities, it should be less likely that a given sidewalk interaction would be between an in-group and out-group member, and so the negative relationship between continuous urban fabric and far-right sympathy will be weaker in cities with high levels of residential segregation. That's Hypothesis 2.
@@ -227,11 +227,11 @@ In the paper, of course, I lay out the full theory step-by-step, but most of it 
 
 ## Paper 2: Context & Data
 
-- 73 cities in Spain
-- 12 CIS monthly barometer surveys (Jan. 2019 to Mar. 2020)
-- City-level data from Eurostat including continuous urban fabric variable
-- City-level segregation index calculated using D4I data
-- Controls: age, gender, religion, education level, and occupation
+-   73 cities in Spain
+-   12 CIS monthly barometer surveys (Jan. 2019 to Mar. 2020)
+-   City-level data from Eurostat including continuous urban fabric variable
+-   City-level segregation index calculated using D4I data
+-   Controls: age, gender, religion, education level, and occupation
 
 ::: notes
 As I said, my goal for this paper was to reduce some of the inconsistencies and build a larger data set, so I choose to focus on a single country: Spain. Spain was a particularly interesting case at this time. When I arrived here people believed Spain was special in some way because the far right had not reemerged here like in other countries. In the 2016 national elections, Vox, the far right party, got just point-two percent of the vote, but two years later, in regional elections in Andalusia they got 11 percent, which was shocking at the time. My data picks up from there and covers the whole period until the arrival of the pandemic. I pool 12 monthly barometer surveys which ask respondents on a scale of 0 to 10 how likely they are to vote for Vox. Those surveys also provide some individual-level controls and I merge them, once again, with Eurostat data on cities. This time I also include a segregation index which I can calculate thanks to the Data Challenge on Integration of Migrants in Cities or D4I dataset. I won't go into it fully, but it's really neat data that provides population estimates by continent of birth for 100 meter by 100 meter grid cells covering the whole country.
@@ -239,9 +239,9 @@ As I said, my goal for this paper was to reduce some of the inconsistencies and 
 
 ## Paper 2: Analysis
 
-- Coded so that: 0 = no sympathy for the far right (Vox), while 1-10 = sympathy for the far right
-- Bayesian multilevel logistic regressions
-- Estimated with brms and rstanarm R packages
+-   Coded so that: 0 = no sympathy for the far right (Vox), while 1-10 = sympathy for the far right
+-   Bayesian multilevel logistic regressions
+-   Estimated with brms and rstanarm R packages
 
 ::: notes
 The original data for the dependent variable, as I said, is coded as 0 to 10, with 0 being "I will never vote for Vox." It's a bit hard to wrap one's head around what a one-unit change would mean on this scale, and my interest was in how Vox had suddenly become a viable option for more voters than ever. So I re-coded the data so that only those who answered 0 do NOT have sympathy for the far right. Everyone else, which was about 25 percent, would consider supporting them. Now, I recognize that this is a normative choice in some ways, so I tested every other possible dichotomous coding too, along with several models that keep the full 0 to 10 range. And the results I'll show in a moment stand up in all of these tests. The main models are Bayesian multilevel logistic regressions run with brms and rstanarm in R, and the levels are cities nested in Autonomous Communities or regions.
@@ -271,7 +271,6 @@ In Model 3, I include population density to show, again, that urban fabric conti
 The conditional effects plot visualizes Hypothesis 2 a bit better. The effect is subtle, so the confidence intervals overlap quite a bit, but we have about 95% confidence in the direction. What you see is that in cities with little segregation, in blue-green, the negative relationship between continuous urban fabric and Vox sympathy is quite strong. In segregated cities, however, the relationship is still there but much weaker. So not only does this paper show that continuous urban fabric is associated with more inclusive attitudes, but it also finds evidence that the contact theory mechanism I describe is driving the relationship. You can also see that in cities with a lot of continuous urban fabric around 20 percent of people, or less, would consider voting for Vox while, on the other side, sympathy for Vox pushes up past 30 percent.
 :::
 
-
 ## Paper 2: Coding Comparision
 
 ![](p2_fig4.png){width="100%"}
@@ -282,17 +281,17 @@ Before I wrap up this paper, here is a quick visualization of the analysis if I 
 
 ## Paper 2: Takeaways
 
-- Strong evidence that continuous urban fabric is associated with inclusive attitudes
-- Using segregation data, we now have evidence that the urban theory plus contact theory mechanism explains this relationship
-- But I promised that urban fabric influences attitudes *and* behavior...
+-   Strong evidence that continuous urban fabric is associated with inclusive attitudes
+-   Using segregation data, we now have evidence that the urban theory plus contact theory mechanism explains this relationship
+-   But I promised that urban fabric influences attitudes *and* behavior...
 
 ::: notes
 Taken together, these papers provide strong evidence for the relationship between urban fabric and two different types of inclusive attitudes. And thanks to the addition of segregation data in the analysis, we now also have evidence that the theoretical pathway from Jane Jacobs through contact theory is indeed at the heart of it. But, I promised that this thesis is about attitudes AND behavior, so now I'll move on to something a little bit different.
 :::
 
-##
+## 
 
-::: {.center-xy}
+::: center-xy
 <h2>Improving the Gravity Model of Human Mobility with Land Use Data</h2>
 :::
 
@@ -302,9 +301,9 @@ Let's talk about how we can use Copernicus data to improve the gravity model of 
 
 ## Paper 3: The Gravity Model
 
-- Elegant model of the flow of people, goods, capital, etc. (Zipf, 1946)
-- Popular thanks to its simplicity and efficiency 
-- Many recent attempts to improve on it
+-   Elegant model of the flow of people, goods, capital, etc. (Zipf, 1946)
+-   Popular thanks to its simplicity and efficiency
+-   Many recent attempts to improve on it
 
 ::: notes
 What is the gravity model? The idea dates back to Zipf in the '40s, and is inspired by the laws of gravity. The basic idea is that the flow of people or goods is a function of the size of their origin and destination and distance between them. In the context human mobility in urban areas, that means that people are drawn to larger neighborhoods and to ones that are close by. It's a very elegant idea and it's still popular to this day. Part of its popularity is due to the minimal data it requires and how easy it is to implement. As we will see, it is fairly accurate, but of course its accuracy can be improved upon if we introduce more data and more elaborate ways to model it.
@@ -312,10 +311,10 @@ What is the gravity model? The idea dates back to Zipf in the '40s, and is inspi
 
 ## Paper 3: "Deep Gravity"
 
-- Simini et al. (2021) use "land use, road network features, transportation, food, health, education, and retail facilities"
-- Deep neural networks
-- Using points of interest makes it difficult to replicate, may introduce inconsistencies
-- Less accurate in cities
+-   Simini et al. (2021) use "land use, road network features, transportation, food, health, education, and retail facilities"
+-   Deep neural networks
+-   Using points of interest makes it difficult to replicate, may introduce inconsistencies
+-   Less accurate in cities
 
 ::: notes
 I want to highlight one recent, prominent attempt to improve on the gravity model, because I think it's illustrative of the state of the recent literature. Simini and colleagues proposed what they call "Deep Gravity" which uses a huge amount of data on everything from the road network to restaurant locations and is analyzed with neural networks. It does improve on the original model, of course, but by gathering points of interests en masse its hard to replicate. The data can also be inconsistent between countries and its less accurate in cities where there are hundreds of points of interest. So even though it's an impressive contribution, it's hard to imagine that it will convert fans of the gravity model who value its simplicity.
@@ -323,9 +322,9 @@ I want to highlight one recent, prominent attempt to improve on the gravity mode
 
 ## Paper 3: Objectives
 
-- Model that's easy to implement and uses common, consistent data
-- Predicts the daily flow of people between urban districts
-- Tested using real world research scenarios
+-   Model that's easy to implement and uses common, consistent data
+-   Predicts the daily flow of people between urban districts
+-   Tested using real world research scenarios
 
 ::: notes
 My goal, then, is to create a model that improves on the gravity model but is still easy to use and find data for. As I said, there are many uses for gravity models, even within the realm of human mobility, so what I am specifically attempting here is to predict the daily flow of people between districts in the same city -- not between cities. And because of my concern that a lot of models in the literature are difficult to apply, I want to test how it performs in some realistic scenarios that researchers may find themselves in.
@@ -333,9 +332,9 @@ My goal, then, is to create a model that improves on the gravity model but is st
 
 ## Paper 3: Incorporating Copernicus
 
-- Copernicus Urban Atlas covers 788 urban areas
-- Data is consistent
-- Relationships between many land cover types and mobility is unclear
+-   Copernicus Urban Atlas covers 788 urban areas
+-   Data is consistent
+-   Relationships between many land cover types and mobility is unclear
 
 ::: notes
 Thankfully, as you know, we have land use data that covers hundreds and hundreds of cities in Europe in a consistent and still fairly detailed way. So, of course, that's what I will use for my model. One disadvantage with the Copernicus Urban Atlas data, though, is that it's not entirely clear how some of those classes might influence mobility, especially in interaction with each other.
@@ -345,12 +344,12 @@ Thankfully, as you know, we have land use data that covers hundreds and hundreds
 
 **Gravity Model**
 
-- OLS regression with log of origin and destination population, distance
+-   OLS regression with log of origin and destination population, distance
 
 **Land Use Model**
 
-- Adds proportion of each land use class in origin/dest.
-- XGBoost machine learning regression
+-   Adds proportion of each land use class in origin/dest.
+-   XGBoost machine learning regression
 
 Trained on data from 42 million Spanish mobiles in Nov. 2019
 
@@ -379,7 +378,7 @@ Those random tests alone are enough to show that my model is then more accurate 
 ![](p3_map1.png){width="100%"}
 
 ::: notes
-So here are some maps. These are two examples of the actual flows for November 2021, on the left, compared to my model's prediction in the middle and the gravity model's on the right. The first thing to notice is that my model overestimates mobility a little bit, which isn't surprising considering that the predictions were generated using pre-Covid data. But we already know that my model is more accurate, overall, so the interesting thing is to see how it does it. The gravity model, no surprise, assumes that people will gravitate towards the center of both cities. But my model picks up on the complexities of the actual pattern pretty well. 
+So here are some maps. These are two examples of the actual flows for November 2021, on the left, compared to my model's prediction in the middle and the gravity model's on the right. The first thing to notice is that my model overestimates mobility a little bit, which isn't surprising considering that the predictions were generated using pre-Covid data. But we already know that my model is more accurate, overall, so the interesting thing is to see how it does it. The gravity model, no surprise, assumes that people will gravitate towards the center of both cities. But my model picks up on the complexities of the actual pattern pretty well.
 :::
 
 ## Paper 3: Unknown Cities
@@ -387,7 +386,7 @@ So here are some maps. These are two examples of the actual flows for November 2
 ![](p3_fig4.png){width="100%"}
 
 ::: notes
-For the next test, we imagine a researcher who has the same data I do but wants to know about mobility in a city that isn't included. To do that, I exclude each city one-by-one and use data from the other cities to make predictions for it. This task is tougher and its actually called flow generation in the literature, instead of prediction. There are 39 cities in the data set and my model does better for 38 of them, the one exception, which is below the big grey line, is Madrid. This isn't entirely surprising because Madrid is much bigger than other cities in Spain and XGBoost doesn't do well with test data that's meaningfully distinct from the training data. Overall it does quite well though. 
+For the next test, we imagine a researcher who has the same data I do but wants to know about mobility in a city that isn't included. To do that, I exclude each city one-by-one and use data from the other cities to make predictions for it. This task is tougher and its actually called flow generation in the literature, instead of prediction. There are 39 cities in the data set and my model does better for 38 of them, the one exception, which is below the big grey line, is Madrid. This isn't entirely surprising because Madrid is much bigger than other cities in Spain and XGBoost doesn't do well with test data that's meaningfully distinct from the training data. Overall it does quite well though.
 :::
 
 ## Paper 3: Unknown Cities
@@ -408,9 +407,9 @@ Let me show you one final test before I wrap up, and as an aspiring post-doc thi
 
 ## Paper 3: Takeaways
 
-- Land use model is fast and accurate when modelling this type of human mobility
-- Gravity model is popular across a wide range of applications
-- Copernicus data shows its utility once again
+-   Land use model is fast and accurate when modelling this type of human mobility
+-   Gravity model is popular across a wide range of applications
+-   Copernicus data shows its utility once again
 
 ::: notes
 This paper shows that, for flows between urban districts, the land use model is almost always better than the gravity model while still remaining easy and fast to implement. However, there are many different ways to measure and study human mobility, and the gravity model has proven its versatility. Given the overarching theme of this thesis, however, perhaps the most important takeaway is that once again Copernicus data has proven how useful it can be.
@@ -420,23 +419,47 @@ This paper shows that, for flows between urban districts, the land use model is 
 
 **Social Scientists**
 
-- Geography matters -- Copernicus data may help
+-   Geography matters -- Copernicus data may help
 
 **Policymakers**
 
-- Small design changes possible; be aware of vulnerability
+-   Small design changes possible; be aware of vulnerability
 
 **City Dwellers**
 
-- Think twice about new, discontinuous developments
+-   Think twice about new, discontinuous developments
 
 ::: notes
 And that is my final thought for social scientists. We know that geography matters across the whole range of topics we study, and my thesis shows how easy it can be to incorporate geography data into your research and how much it can teach us. For policymakers, the practical recommendations of this thesis are a bit more tricky. Unfortunately, the trends we can see in the most recent Copernicus data aren't very encouraging. If anything, European urban fabric is getting more discontinuous, and we certainly don't want to return to the days of razing entire neighborhoods to rebuild them in a different vision. Jacobs does offer some specific, small-scale recommendations on how to retrofit discontinuous developments, which may be helpful. But more importantly, I think policymakers should be aware of the vulnerabilities that discontinuous urban fabric can cause. Segregation is often at the top of our minds when we think about diversity and inclusion in cities, but without continuous urban fabric, desegregation efforts may not have the full, desired effect. Finally, what about us city dwellers? If discontinuous urban fabric remains popular, maybe that just reflects people's legitimate preferences. I admit that even after five years of studying this, I'm still enticed by the renderings outside of construction sites that show all this life between gleaming, disconnected new buildings, coming soon. So 100 years after Howard and Le Corbusier, their utopian visions are still a big part of how city life is marketed. But Jacobs told us that cities work best when we embrace them as they are, chaotic and imperfect, and I hope my thesis honors that legacy. Thank you all very much.
 :::
 
-##
+## 
 
-::: {.center-xy}
+::: center-xy
 <h2>Thank You</h2>
-
 :::
+
+## {visibility="uncounted"}
+
+![](int_map3.png){width="100%"}
+
+## {visibility="uncounted"}
+
+![](p2_fig3.png){width="100%"}
+
+## {visibility="uncounted"}
+
+![](p3_fig1.png){width="100%"}
+
+## {visibility="uncounted"}
+
+![](p3_fig5.png){width="100%"}
+
+## {visibility="uncounted"}
+
+![](con_map1.png){width="100%"}
+
+## {visibility="uncounted"}
+
+![](con_map2.png){width="100%"}
+
