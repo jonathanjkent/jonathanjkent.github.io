@@ -61,7 +61,7 @@ Urban fabric is any area in a city with residential buildings, and whether or no
 ![](int_map4.png){width="100%"} <font size="4">Urban fabric of Barcelona (left) and Berlin (right).</font>
 
 ::: notes
-Those images were taken from Google Earth, and now we see the cities through the eyes of the Urban Atlas. Once again Barcelona is on the left and Berlin is on the right. And here, continuous urban fabric is in dark blue and discontinuous is in light blue. As you can see, the distribution of urban fabric can vary quite a bit. Going forward, when I refer to an urban fabric variable, I'm talking about the percentage of a city's urban fabric that is designated as continuous, which, for Barcelona, is 84 percent and for Berlin is 15 percent.
+Those images were taken from Google Earth, and now we see the cities through the eyes of the Urban Atlas. Once again Barcelona is on the left and Berlin is on the right. And here, continuous urban fabric is in dark blue and discontinuous is in light blue. As you can see, the distribution of urban fabric can vary quite a bit. Going forward, when I refer to an urban fabric variable, I'm talking about the percentage of a city's urban fabric that is designated as continuous, which, for Barcelona, is 84 percent and for Berlin is 15 percent. So, among the cities in the data that I will use, Barcelona has one of the highest ratios of continuous urban fabric and Berlin has one of the lowest, just to give some context for what's to come.
 :::
 
 ## 20th Century Trends in Urban Design
@@ -125,10 +125,10 @@ So with that background out of the way, we are ready to get into how urban desig
 -   Allport's contact hypothesis (1954)
 -   Contact between in-groups and out-groups reduces prejudice
 -   Four conditions: equal status, common goals, cooperative environment, societal support
--   Very large body of empirical evidence confirms the core idea and finds that the conditions are not necessary
+-   Empirical evidence confirms the core idea and finds that the conditions are **not** necessary
 
 ::: notes
-So, we have reason to believe that urban design influences how often neighbors interact with each other, which means contact theory is relevant. Allport is famous for formalizing the theory that contact between in-groups and out-groups, like natives and foreigners, would reduce prejudice. He claimed that contact would be effective if four conditions were met, but empirical evidence has shown they aren't necessary just helpful. Hundreds of studies have confirmed that contact reduces prejudice in a wide variety of contexts and between a wide variety of in-group/out-group combinations.
+So, we have reason to believe that urban design influences how often neighbors interact with each other, which means contact theory is relevant. Allport is famous for formalizing the theory that contact between in-groups and out-groups, like natives and foreigners, would reduce prejudice. He claimed that contact would be effective if four conditions were met, but empirical evidence has shown they are NOT necessary just helpful. Hundreds of studies have confirmed that contact reduces prejudice in a wide variety of contexts and between a wide variety of in-group/out-group combinations.
 :::
 
 ## Paper 1: Contact Theory
@@ -140,7 +140,7 @@ So, we have reason to believe that urban design influences how often neighbors i
 -   Exciting implications at the scale of a city
 
 ::: notes
-There is so much evidence supporting the theory that researchers have begun testing just how far the power of contact might extend. We now have evidence of positive effects for the friends of those who made contact, even if they did not themselves. Just witnessing in-group and out-group members interacting also reduces prejudice. And even merely being exposed to out-groups, without any interaction, improves attitudes. So in a diverse city with a lot of sidewalk activity, the implications of these indirect effects are really quite exciting.
+There is so much evidence supporting the theory that researchers have begun testing just how far the power of contact might extend. We now have evidence of positive effects for the friends of those who made contact, even if they did not themselves. Just witnessing in-group and out-group members interacting also reduces prejudice. And even merely being exposed to out-groups, without any interaction, improves attitudes. These types of indirect contact have also been referred to as "casual contact," and this is what I think should be especially prevalent in cities with lots of continuous urban fabric.
 :::
 
 ## Paper 1: Hypotheses
@@ -179,7 +179,7 @@ I model the data using traditional multilevel logistic regression estimated in R
 ![](p1_findings.png){width="100%"}
 
 ::: notes
-And here is what I found. These are beta coefficient estimates for the city-level variables, but all the individual-level controls are included in the models too, just not in these visualizations. Starting with Model 1 on the left, at the top we have the urban fabric variable and we expect a positive relationship -- that people in cities with more continuous urban fabric are more likely to have positive attitudes toward foreigners. That is what we find, so we can confirm Hypothesis 1. Moving down the list of variables in Model 1, we see no significant effect for the overall population of the city or the size of the migrant population, but we do find a negative effect for the change in migrant population. So if that population grew over the past decade, people are less likely to have positive attitudes toward foreigners. I also want to draw your attention to the population density variable at the bottom. It has no effect, and this is important because it reinforces the argument that what matters is design and opportunities for interaction, not just living near a lot of people. Now, moving on to Model 2, here I add in the interaction between urban fabric and migrant population and expect to find a negative relationship. If anything, though, the relationship might be positive, so we cannot confirm Hypothesis 2. The reason it fails may be as simple as some misalignment in the data. The dependent variable question is about foreigners but the data for this hypothesis is about migrants specifically, so this may be where the logical chain breaks.
+And here is what I found. These are beta coefficient estimates for the city-level variables, but all the individual-level controls are included in the models too, just not in these visualizations. Starting with Model 1 on the left, at the top we have the urban fabric variable and we expect a positive relationship -- that people in cities with more continuous urban fabric are more likely to have positive attitudes toward foreigners. That is what we find, so we can confirm Hypothesis 1. Of course, there are other theories about how prejudice emerges, like group threat and contact theory. Those theories are concerned with perceptions of economic or cultural conflicts and they have been tested using population data. So, moving down the list of variables in Model 1, we see no significant effect the size of the migrant population, but we do find a negative effect for the change in migrant population. So if that population grew over the past decade, people are less likely to have positive attitudes toward foreigners. In this thesis, I am more interested in controlling for potential confounders than testing these theories directly, but it's interesting nonetheless. I also want to draw your attention to the population density variable at the bottom. It has no effect, and this is important because it reinforces the argument that what matters is design and opportunities for interaction, not just living near a lot of people. Now, moving on to Model 2, here I add in the interaction between urban fabric and migrant population and expect to find a negative relationship. If anything, though, the relationship might be positive, so we cannot confirm Hypothesis 2. The reason it fails may be as simple as some misalignment in the data. The dependent variable question is about foreigners but the data for this hypothesis is about migrants specifically, so this may be where the logical chain breaks.
 :::
 
 ## Paper 1: Takeaways
@@ -189,7 +189,7 @@ And here is what I found. These are beta coefficient estimates for the city-leve
 -   22 cities is fewer than ideal
 
 ::: notes
-Here is what I took away from writing this paper. First, that my inclination seems to be correct that urban fabric continuity would have an influence on attitudes toward diversity. No one has ever used this data for anything like this purpose before, so that's pretty exciting itself. But the next big question is why. I lay out what I hope is a pretty convincing argument that this relationship can be explained by Jacobs and contact theory, but my attempt at testing that mechanism came up short. Also, it was disappointing that my data was whittled all the way down to just 22 cities. So next, I wanted to find a larger set of data in order to fix some of these issues and test what else urban fabric might be capable of.
+Here is what I took away from writing this paper. First, my inclination seems to be correct that urban fabric continuity would have an influence on attitudes toward diversity. No one has ever used this data for anything like this purpose before, so finding that is pretty exciting itself. But the next big question is why. I lay out what I hope is a pretty convincing argument that this relationship can be explained by Jacobs and contact theory, but my attempt at testing that mechanism came up short. Also, it was disappointing that my data was whittled all the way down to just 22 cities. So next, I wanted to find a larger set of data in order to fix some of these issues and test what else urban fabric might be capable of.
 :::
 
 ## 
@@ -212,7 +212,7 @@ And that's just what I try to do in my second paper, which is called Does Urban 
 -   If urban design influences prejudice and tolerance, it may influence sympathy for the far right
 
 ::: notes
-We can all remember, just a little while ago, that it was shocking when far right parties first began to win a few seats in European parliaments. But these days it is barely surprising when they get the plurality of votes in elections. This mainstreaming is what Mudde calls the fourth wave of the return of the far right. And he wrote that although they aren't single-issue parties, xenophobia and opposition to immigration are tremendously important to the far right. Bobbio put it even more simply, writing that the far right believes "inequalities are natural and outside the purview of the state." Given all that, it stands to reason that if urban design influences prejudice it might also influence sympathy for the far right.
+We can all remember, just a little while ago, that it was shocking when far right parties first began to win a few seats in European parliaments. But these days it is barely surprising when they get the plurality of votes in elections. This mainstreaming is what Mudde calls the fourth wave of the return of the far right. And he wrote that although they aren't single-issue parties, xenophobia and opposition to immigration are tremendously important to the far right. Bobbio put it even more simply, writing that the far right believes "inequalities are natural and outside the purview of the state." So prejudice towards out-groups is key to the logic of the ideology. Given all that, it stands to reason that if urban design influences prejudice it might also influence sympathy for the far right.
 :::
 
 ## Paper 2: Hypotheses
@@ -252,7 +252,7 @@ The original data for the dependent variable, as I said, is coded as 0 to 10, wi
 ![](p2_m12.png){width="100%"}
 
 ::: notes
-So, before I talk through the findings, I just want to point out a thing I love about Bayesian modelling. Which is that, instead of falling into the tendency of scanning through model summaries looking for p-values, we get these great visualizations of the model which shift the focus to the probable values of the coefficients. So here we have, in black, 80 and 95 percent confidence intervals as well as the full distribution of the draws in blue. In both Model 1 and 2 we can be very confident that there is a negative relationship between urban fabric and sympathy for Vox, just as expected, which confirms Hypothesis 1. Some other things of note are that higher unemployment rates are associated with more support for Vox, and that segregation -- on its own -- doesn't seem to have a clear effect one way or the other.
+So, before I talk through the findings, I just want to point out a thing I love about Bayesian modelling. Which is that, instead of falling into the tendency of scanning through model summaries looking for p-values, we get these great visualizations of the model which shift the focus to the probable values of the coefficients. So here we have, in black, 80 and 95 percent confidence intervals as well as the full distribution of the draws in blue. In both Model 1 and 2 we can be very confident that there is a negative relationship between urban fabric and sympathy for Vox, just as expected, which confirms Hypothesis 1. Some other things of note are that higher unemployment rates are associated with more support for Vox, which speaks to conflict theory, and also that segregation -- on its own -- doesn't seem to have a clear effect one way or the other.
 :::
 
 ## Paper 2: Findings
@@ -309,7 +309,7 @@ Let's talk about how we can use Copernicus data to improve the gravity model of 
 What is the gravity model? The idea dates back to Zipf in the '40s, and is inspired by the laws of gravity. The basic idea is that the flow of people or goods is a function of the size of their origin and destination and distance between them. In the context human mobility in urban areas, that means that people are drawn to larger neighborhoods and to ones that are close by. It's a very elegant idea and it's still popular to this day. Part of its popularity is due to the minimal data it requires and how easy it is to implement. As we will see, it is fairly accurate, but of course its accuracy can be improved upon if we introduce more data and more elaborate ways to model it.
 :::
 
-## Paper 3: "Deep Gravity"
+## Paper 3: Other Attempts
 
 -   Simini et al. (2021) use "land use, road network features, transportation, food, health, education, and retail facilities"
 -   Deep neural networks
