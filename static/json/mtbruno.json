@@ -1,0 +1,17 @@
+{
+  "data": [
+      {
+          "x": [
+              "lunch",
+              "breakfast",
+              "dinner"
+          ],
+          "y": [
+              20,
+              14,
+              23
+          ],
+          "type": "bar"
+      }
+  ]
+}

@@ -1,0 +1,19 @@
+<script src="{{ "js/jquery.min.js" | absURL }}"></script>
+<script src="{{ "js/bootstrap.min.js" | absURL }}"></script>
+<script src="{{ "js/jquery.cookie.js" | absURL }}"> </script>
+<script src="{{ "js/ekko-lightbox.js" | absURL }}"></script>
+<script src="{{ "js/jquery.scrollTo.min.js" | absURL }}"></script>
+<script src="{{ "js/masonry.pkgd.min.js" | absURL }}"></script>
+<script src="{{ "js/imagesloaded.pkgd.min.js" | absURL }}"></script>
+<script src="{{ "js/owl.carousel.min.js" | absURL }}"></script>
+<script src="{{ "js/front.js" | absURL }}"></script>
+
+{{ if .Site.Params.analytics.matomo }}
+  {{ partial "_analytics/matomo.html" . }}
+{{ end }}
+
+<!-- Embed d3.js and plotly.js if plotly:true -->
+{{ if .Params.plotly }}
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.plot.ly/plotly-2.29.1.min.js"></script>
+{{ end }}
