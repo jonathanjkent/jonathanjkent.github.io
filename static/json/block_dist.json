@@ -55,8 +55,8 @@
       "width": [0.89999999999999991, 0.90000000000000013, 0.90000000000000036, 0.90000000000000036, 0.90000000000000036, 0.90000000000000036, 0.90000000000000036, 0.89999999999999947, 0.89999999999999858, 0.89999999999999858],
       "base": [3.2000000000000002, 11.6, 0, 5.2999999999999998, 11, 0.40000000000000002, 5.4000000000000004, 14.899999999999999, 9.4000000000000004, 0],
       "x": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-      "y": [53.100000000000001, 50.399999999999999, 71.799999999999997, 74.900000000000006, 37.299999999999997, 30.199999999999999, 56.299999999999997, 59.100000000000001, 80.700000000000003, 11.6],
-      "text": ["Week:  1<br />Distance at Pace (KM):  53.1<br />Pace: Base & Recovery<br />Total Distance (KM):  56.3", "Week:  2<br />Distance at Pace (KM):  50.4<br />Pace: Base & Recovery<br />Total Distance (KM):  62.0", "Week:  3<br />Distance at Pace (KM):  71.8<br />Pace: Base & Recovery<br />Total Distance (KM):  71.8", "Week:  4<br />Distance at Pace (KM):  74.9<br />Pace: Base & Recovery<br />Total Distance (KM):  80.3", "Week:  5<br />Distance at Pace (KM):  37.3<br />Pace: Base & Recovery<br />Total Distance (KM):  48.3", "Week:  6<br />Distance at Pace (KM):  30.2<br />Pace: Base & Recovery<br />Total Distance (KM):  30.6", "Week:  7<br />Distance at Pace (KM):  56.3<br />Pace: Base & Recovery<br />Total Distance (KM):  61.7", "Week:  8<br />Distance at Pace (KM):  59.1<br />Pace: Base & Recovery<br />Total Distance (KM):  73.9", "Week:  9<br />Distance at Pace (KM):  80.7<br />Pace: Base & Recovery<br />Total Distance (KM):  90.1", "Week: 10<br />Distance at Pace (KM):  11.6<br />Pace: Base & Recovery<br />Total Distance (KM):  11.6"],
+      "y": [53.100000000000001, 50.399999999999999, 71.799999999999997, 74.900000000000006, 37.299999999999997, 30.199999999999999, 56.299999999999997, 59.100000000000001, 80.700000000000003, 17.899999999999999],
+      "text": ["Week:  1<br />Distance at Pace (KM):  53.1<br />Pace: Base & Recovery<br />Total Distance (KM):  56.3", "Week:  2<br />Distance at Pace (KM):  50.4<br />Pace: Base & Recovery<br />Total Distance (KM):  62.0", "Week:  3<br />Distance at Pace (KM):  71.8<br />Pace: Base & Recovery<br />Total Distance (KM):  71.8", "Week:  4<br />Distance at Pace (KM):  74.9<br />Pace: Base & Recovery<br />Total Distance (KM):  80.3", "Week:  5<br />Distance at Pace (KM):  37.3<br />Pace: Base & Recovery<br />Total Distance (KM):  48.3", "Week:  6<br />Distance at Pace (KM):  30.2<br />Pace: Base & Recovery<br />Total Distance (KM):  30.6", "Week:  7<br />Distance at Pace (KM):  56.3<br />Pace: Base & Recovery<br />Total Distance (KM):  61.7", "Week:  8<br />Distance at Pace (KM):  59.1<br />Pace: Base & Recovery<br />Total Distance (KM):  73.9", "Week:  9<br />Distance at Pace (KM):  80.7<br />Pace: Base & Recovery<br />Total Distance (KM):  90.1", "Week: 10<br />Distance at Pace (KM):  17.9<br />Pace: Base & Recovery<br />Total Distance (KM):  17.9"],
       "type": "bar",
       "textposition": "none",
       "marker": {
@@ -662,7 +662,7 @@
   },
   "source": "A",
   "attrs": {
-    "85917b9c749e": {
+    "95e811c20269": {
       "x": {},
       "y": {},
       "fill": {},
@@ -670,9 +670,9 @@
       "type": "bar"
     }
   },
-  "cur_data": "85917b9c749e",
+  "cur_data": "95e811c20269",
   "visdat": {
-    "85917b9c749e": ["function (y) ", "x"]
+    "95e811c20269": ["function (y) ", "x"]
   },
   "highlight": {
     "on": "plotly_click",
