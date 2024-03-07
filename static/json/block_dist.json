@@ -662,7 +662,7 @@
   },
   "source": "A",
   "attrs": {
-    "95e82d3fb381": {
+    "95e8cf6f63e": {
       "x": {},
       "y": {},
       "fill": {},
@@ -670,9 +670,9 @@
       "type": "bar"
     }
   },
-  "cur_data": "95e82d3fb381",
+  "cur_data": "95e8cf6f63e",
   "visdat": {
-    "95e82d3fb381": ["function (y) ", "x"]
+    "95e8cf6f63e": ["function (y) ", "x"]
   },
   "highlight": {
     "on": "plotly_click",
