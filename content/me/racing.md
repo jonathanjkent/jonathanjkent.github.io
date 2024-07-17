@@ -4,7 +4,7 @@ image = "img/portfolio/run.jpeg"
 showonlyimage = true
 date = "2016-11-05T20:22:08+05:30"
 title = "Road Running"
-weight = 6
+weight = 7
 plotly = true
 +++
 

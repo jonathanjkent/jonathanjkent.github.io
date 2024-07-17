@@ -1,5 +1,5 @@
 +++
-showonlyimage = true
+showonlyimage = false
 draft = false
 image = "img/portfolio/niche-analytics.png"
 date = "2016-11-05T18:25:22+05:30"
@@ -7,7 +7,7 @@ title = "Niche Analytics"
 weight = 4
 +++
 
-I founded Niche Analytics because I believe that data can be a power for good in sport. 
+I founded [Niche Analytics](https://nicheanalytics.org) because I believe that data can be a power for good in sport. 
 
 <!--more-->
 
