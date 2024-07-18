@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dr. Jonathan Kent</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Dr. Jonathan Kent</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 05 Nov 2016 20:22:08 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Curriculum Vitae</title>
+      <link>http://localhost:1313/me/cv/</link>
+      <pubDate>Sat, 05 Nov 2016 19:56:17 +0530</pubDate>
+      <guid>http://localhost:1313/me/cv/</guid>
+      <description>&lt;p&gt;More about me, in PDF format.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Latest Paper</title>
+      <link>http://localhost:1313/me/latest-paper/</link>
+      <pubDate>Sat, 05 Nov 2016 19:44:32 +0530</pubDate>
+      <guid>http://localhost:1313/me/latest-paper/</guid>
+      <description>&lt;p&gt;Now out in &lt;em&gt;City, Culture &amp;amp; Society&lt;/em&gt;, my paper on the relationship between urban land use and sympathy for far-right political parties.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Dissertation</title>
+      <link>http://localhost:1313/me/dissertation/</link>
+      <pubDate>Sat, 05 Nov 2016 19:59:22 +0530</pubDate>
+      <guid>http://localhost:1313/me/dissertation/</guid>
+      <description>&lt;p&gt;In November 2023, I successfully defended my dissertation on the impact of urban design on the attitudes and behaviors of city dwellers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Publications</title>
+      <link>http://localhost:1313/me/publications/</link>
+      <pubDate>Sat, 05 Nov 2016 19:50:47 +0530</pubDate>
+      <guid>http://localhost:1313/me/publications/</guid>
+      <description>&lt;p&gt;For more on my academic output, take a look at my &lt;a href=&#34;https://scholar.google.com/citations?user=IKdgqG4AAAAJ&amp;amp;hl&#34;&gt;Google Scholar page&lt;/a&gt;. My work uses machine learning and Bayesian statistics to tackle a wide range of topics including urban design and land use, attitudes toward diversity, human mobility, mosquito encounters, and sports analytics.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Niche Analytics</title>
+      <link>http://localhost:1313/me/niche-analytics/</link>
+      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+      <guid>http://localhost:1313/me/niche-analytics/</guid>
+      <description>&lt;p&gt;I founded &lt;a href=&#34;https://nicheanalytics.org&#34;&gt;Niche Analytics&lt;/a&gt; because I believe that data can be a power for good in sport.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Road Running</title>
+      <link>http://localhost:1313/me/racing/</link>
+      <pubDate>Sat, 05 Nov 2016 20:22:08 +0530</pubDate>
+      <guid>http://localhost:1313/me/racing/</guid>
+      <description>&lt;p&gt;Like so many runners&amp;mdash;especially those of us from New England&amp;mdash;I am determined to eventually run a Boston Marathon qualifying time. My marathon personal best stands at 3:13 (8 minutes shy of a BQ) and, as you can see from the plot here, the journey has been long.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>FUTSTAT.CAT</title>
+      <link>http://localhost:1313/me/futstat/</link>
+      <pubDate>Sat, 05 Nov 2016 18:25:22 +0530</pubDate>
+      <guid>http://localhost:1313/me/futstat/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://futstat.cat/&#34;&gt;My first public foray into sports analytics&lt;/a&gt; forecasts men&amp;rsquo;s and women&amp;rsquo;s Catalan football leagues from La Liga to the fifth tier. Visca Barça! Dale UESA!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Baseball Analytics</title>
+      <link>http://localhost:1313/me/kbo/</link>
+      <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
+      <guid>http://localhost:1313/me/kbo/</guid>
+      <description>&lt;p&gt;During the early months of the pandemic, I launched &lt;a href=&#34;https://www.kbofancystats.com/&#34;&gt;KBOfancystats.com&lt;/a&gt; which provides advanced analytics and predictions for Korean baseball fans.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

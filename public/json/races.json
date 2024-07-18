@@ -1,0 +1,186 @@
+{
+  "data": [
+    {
+      "x": [19867, 19848, 19694, 19645, 19610, 19470, 19330, 19302, 19288, 19154, 19126, 18967, 17643, 17426, 16942, 16571, 16207, 16166, 16011, 15941, 15885, 15130, 14954, 14938],
+      "y": [64.159999999999997, 58.140000000000001, 59.219999999999999, 63.969999999999999, 62.909999999999997, 63.93, 59.100000000000001, 62.140000000000001, 62.219999999999999, 58.039999999999999, 59.079999999999998, 53.039999999999999, 51.109999999999999, 46.200000000000003, 47.170000000000002, 46.789999999999999, 49.390000000000001, 46.759999999999998, 48.280000000000001, 47.240000000000002, 46.340000000000003, 44.869999999999997, 39.670000000000002, 43.340000000000003],
+      "text": ["Date: 2024-05-24<br />Age Grade: 64.16<br />Häsli Night Run<br />Time: 42:35<br />Distance(KM): 10.0", "Date: 2024-05-05<br />Age Grade: 58.14<br />Copenhagen Marathon<br />Time: 3:34:23<br />Distance(KM): 42.2", "Date: 2023-12-03<br />Age Grade: 59.22<br />Valencia Marathon<br />Time: 3:29:12<br />Distance(KM): 42.2", "Date: 2023-10-15<br />Age Grade: 63.97<br />Amsterdam Marathon<br />Time: 3:13:40<br />Distance(KM): 42.2", "Date: 2023-09-10<br />Age Grade: 62.91<br />Great North Run<br />Time: 1:33:58<br />Distance(KM): 21.1", "Date: 2023-04-23<br />Age Grade: 63.93<br />Zürich Half<br />Time: 1:32:28<br />Distance(KM): 21.1", "Date: 2022-12-04<br />Age Grade: 59.10<br />Valencia Marathon<br />Time: 3:28:35<br />Distance(KM): 42.2", "Date: 2022-11-06<br />Age Grade: 62.14<br />Lago Maggiore Half<br />Time: 1:34:39<br />Distance(KM): 21.1", "Date: 2022-10-23<br />Age Grade: 62.22<br />Cursa Bombers<br />Time: 43:19<br />Distance(KM): 10.0", "Date: 2022-06-11<br />Age Grade: 58.04<br />Helsinki Half<br />Time: 1:41:20<br />Distance(KM): 21.1", "Date: 2022-05-14<br />Age Grade: 59.08<br />Geneva 10K<br />Time: 45:37<br />Distance(KM): 10.0", "Date: 2021-12-06<br />Age Grade: 53.04<br />Cursa de Sant Andreu<br />Time: 24:27<br />Distance(KM):  5.0", "Date: 2018-04-22<br />Age Grade: 51.11<br />Cursa Bombers<br />Time: 51:25<br />Distance(KM): 10.0", "Date: 2017-09-17<br />Age Grade: 46.20<br />Cursa de la Merce<br />Time: 57:15<br />Distance(KM): 10.0", "Date: 2016-05-21<br />Age Grade: 47.17<br />Brooklyn Half<br />Time: 2:03:00<br />Distance(KM): 21.1", "Date: 2015-05-16<br />Age Grade: 46.79<br />Brooklyn Half<br />Time: 2:04:00<br />Distance(KM): 21.1", "Date: 2014-05-17<br />Age Grade: 49.39<br />Brooklyn Half<br />Time: 1:57:29<br />Distance(KM): 21.1", "Date: 2014-04-06<br />Age Grade: 46.76<br />Run for the Parks<br />Time: 35:46<br />Distance(KM):  6.4", "Date: 2013-11-02<br />Age Grade: 48.28<br />Dash to the Finish Line 5K<br />Time: 26:37<br />Distance(KM):  5.0", "Date: 2013-08-24<br />Age Grade: 47.24<br />Percy Sutton Harlem 5K<br />Time: 27:12<br />Distance(KM):  5.0", "Date: 2013-06-29<br />Age Grade: 46.34<br />Front Runners Pride Run<br />Time: 45:29<br />Distance(KM):  8.1", "Date: 2011-06-05<br />Age Grade: 44.87<br />Covered Bridges Half<br />Time: 2:09:19<br />Distance(KM): 21.1", "Date: 2010-12-11<br />Age Grade: 39.67<br />Rehoboth Beach Half<br />Time: 2:26:15<br />Distance(KM): 21.1", "Date: 2010-11-25<br />Age Grade: 43.34<br />Great Barrington Turkey Trot<br />Time: 1:00:55<br />Distance(KM): 10.0"],
+      "type": "scatter",
+      "mode": "markers",
+      "marker": {
+        "autocolorscale": false,
+        "color": ["rgba(27,59,89,1)", "rgba(86,177,247,1)", "rgba(86,177,247,1)", "rgba(86,177,247,1)", "rgba(46,97,140,1)", "rgba(46,97,140,1)", "rgba(86,177,247,1)", "rgba(46,97,140,1)", "rgba(27,59,89,1)", "rgba(46,97,140,1)", "rgba(27,59,89,1)", "rgba(19,43,67,1)", "rgba(27,59,89,1)", "rgba(27,59,89,1)", "rgba(46,97,140,1)", "rgba(46,97,140,1)", "rgba(46,97,140,1)", "rgba(21,47,73,1)", "rgba(19,43,67,1)", "rgba(19,43,67,1)", "rgba(24,53,80,1)", "rgba(46,97,140,1)", "rgba(46,97,140,1)", "rgba(27,59,89,1)"],
+        "opacity": 0.80000000000000004,
+        "size": 9.4488188976377963,
+        "symbol": "circle",
+        "line": {
+          "width": 1.8897637795275593,
+          "color": ["rgba(27,59,89,1)", "rgba(86,177,247,1)", "rgba(86,177,247,1)", "rgba(86,177,247,1)", "rgba(46,97,140,1)", "rgba(46,97,140,1)", "rgba(86,177,247,1)", "rgba(46,97,140,1)", "rgba(27,59,89,1)", "rgba(46,97,140,1)", "rgba(27,59,89,1)", "rgba(19,43,67,1)", "rgba(27,59,89,1)", "rgba(27,59,89,1)", "rgba(46,97,140,1)", "rgba(46,97,140,1)", "rgba(46,97,140,1)", "rgba(21,47,73,1)", "rgba(19,43,67,1)", "rgba(19,43,67,1)", "rgba(24,53,80,1)", "rgba(46,97,140,1)", "rgba(46,97,140,1)", "rgba(27,59,89,1)"]
+        }
+      },
+      "hoveron": "points",
+      "showlegend": false,
+      "xaxis": "x",
+      "yaxis": "y",
+      "hoverinfo": "text",
+      "frame": null
+    }
+  ],
+  "layout": {
+    "margin": {
+      "t": 24.836428610103418,
+      "r": 7.3059360730593621,
+      "b": 38.790766509646801,
+      "l": 37.260273972602747
+    },
+    "font": {
+      "color": "rgba(0,0,0,1)",
+      "family": "",
+      "size": 14.611872146118724
+    },
+    "xaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [14691.549999999999, 20113.450000000001],
+      "tickmode": "array",
+      "ticktext": ["2015", "2020", "2025"],
+      "tickvals": [16436, 18262, 20089],
+      "categoryorder": "array",
+      "categoryarray": ["2015", "2020", "2025"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "",
+        "size": 11.68949771689498
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(235,235,235,1)",
+      "gridwidth": 0.66417600664176002,
+      "zeroline": false,
+      "anchor": "y",
+      "title": {
+        "text": "Date",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "yaxis": {
+      "domain": [0, 1],
+      "automargin": true,
+      "type": "linear",
+      "autorange": false,
+      "range": [38.445500000000003, 65.384500000000003],
+      "tickmode": "array",
+      "ticktext": ["40", "45", "50", "55", "60", "65"],
+      "tickvals": [40, 45, 50, 55, 60, 65],
+      "categoryorder": "array",
+      "categoryarray": ["40", "45", "50", "55", "60", "65"],
+      "nticks": null,
+      "ticks": "",
+      "tickcolor": null,
+      "ticklen": 3.6529680365296811,
+      "tickwidth": 0,
+      "showticklabels": true,
+      "tickfont": {
+        "color": "rgba(77,77,77,1)",
+        "family": "",
+        "size": 11.68949771689498
+      },
+      "tickangle": -0,
+      "showline": false,
+      "linecolor": null,
+      "linewidth": 0,
+      "showgrid": true,
+      "gridcolor": "rgba(235,235,235,1)",
+      "gridwidth": 0.66417600664176002,
+      "zeroline": false,
+      "anchor": "x",
+      "title": {
+        "text": "Age Grade",
+        "font": {
+          "color": "rgba(0,0,0,1)",
+          "family": "",
+          "size": 14.611872146118724
+        }
+      },
+      "hoverformat": ".2f"
+    },
+    "shapes": [
+      {
+        "type": "rect",
+        "fillcolor": null,
+        "line": {
+          "color": null,
+          "width": 0,
+          "linetype": []
+        },
+        "yref": "paper",
+        "xref": "paper",
+        "x0": 0,
+        "x1": 1,
+        "y0": 0,
+        "y1": 1
+      }
+    ],
+    "showlegend": false,
+    "legend": {
+      "bgcolor": null,
+      "bordercolor": null,
+      "borderwidth": 0,
+      "font": {
+        "color": "rgba(0,0,0,1)",
+        "family": "",
+        "size": 11.68949771689498
+      }
+    },
+    "hovermode": "closest",
+    "barmode": "relative"
+  },
+  "config": {
+    "doubleClick": "reset",
+    "modeBarButtonsToAdd": ["hoverclosest", "hovercompare"],
+    "showSendToCloud": false
+  },
+  "source": "A",
+  "attrs": {
+    "bf725608a8": {
+      "x": {},
+      "y": {},
+      "text": {},
+      "label": {},
+      "colour": {},
+      "type": "scatter"
+    }
+  },
+  "cur_data": "bf725608a8",
+  "visdat": {
+    "bf725608a8": ["function (y) ", "x"]
+  },
+  "highlight": {
+    "on": "plotly_click",
+    "persistent": false,
+    "dynamic": false,
+    "selectize": false,
+    "opacityDim": 0.20000000000000001,
+    "selected": {
+      "opacity": 1
+    },
+    "debounce": 0
+  },
+  "shinyEvents": ["plotly_hover", "plotly_click", "plotly_selected", "plotly_relayout", "plotly_brushed", "plotly_brushing", "plotly_clickannotation", "plotly_doubleclick", "plotly_deselect", "plotly_afterplot", "plotly_sunburstclick"],
+  "base_url": "https://plot.ly"
+}
