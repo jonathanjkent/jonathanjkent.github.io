@@ -13,4 +13,4 @@ I founded [Niche Analytics](https://nicheanalytics.org) because I believe that d
 
 We build process-oriented training tools that help athletes enjoy the journey while reaching their potential. We help teams identify diamonds-in-the-rough, because there is nothing quite so satisfying as watching a home-grown phenom develop. And we help fans of niche sports and neglected leagues bask in the glory of upsets and comebacks, no matter the level.
 
-https://nicheanalytics.org/
+Learn more: https://nicheanalytics.org/
