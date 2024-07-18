@@ -1,6 +1,6 @@
 +++
 date = "2016-11-05T19:41:01+05:30"
-title = "Baseball Analytics"
+title = "Baseball Statistics"
 draft = false
 image = "img/portfolio/kbo.png"
 showonlyimage = true
