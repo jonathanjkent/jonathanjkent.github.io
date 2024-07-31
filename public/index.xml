@@ -13,7 +13,7 @@
       <link>http://localhost:1313/me/cv/</link>
       <pubDate>Sat, 05 Nov 2016 19:56:17 +0530</pubDate>
       <guid>http://localhost:1313/me/cv/</guid>
-      <description>&lt;p&gt;More about me, in PDF format.&lt;/p&gt;</description>
+      <description>More about me, in PDF format.</description>
     </item>
     <item>
       <title>Latest Paper</title>
@@ -48,7 +48,7 @@
       <link>http://localhost:1313/me/racing/</link>
       <pubDate>Sat, 05 Nov 2016 20:22:08 +0530</pubDate>
       <guid>http://localhost:1313/me/racing/</guid>
-      <description>&lt;p&gt;Like so many runners&amp;mdash;especially those of us from New England&amp;mdash;I am determined to eventually run a Boston Marathon qualifying time. My marathon personal best stands at 3:13 (8 minutes shy of a BQ) and, as you can see from the plot here, the journey has been long.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Like so many runners&amp;mdash;especially those of us from New England&amp;mdash;I am determined to eventually run a Boston Marathon qualifying time. My marathon personal best stands at 3:13 (3 minutes shy of a BQ) and, as you can see from the plot here, the journey has been long.&lt;/p&gt;</description>
     </item>
     <item>
       <title>FUTSTAT.CAT</title>
@@ -58,7 +58,7 @@
       <description>&lt;p&gt;&lt;a href=&#34;https://futstat.cat/&#34;&gt;My first public foray into sports analytics&lt;/a&gt; forecasts men&amp;rsquo;s and women&amp;rsquo;s Catalan football leagues from La Liga to the fifth tier. Visca Barça! Dale UESA!&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Baseball Analytics</title>
+      <title>Baseball Statistics</title>
       <link>http://localhost:1313/me/kbo/</link>
       <pubDate>Sat, 05 Nov 2016 19:41:01 +0530</pubDate>
       <guid>http://localhost:1313/me/kbo/</guid>
