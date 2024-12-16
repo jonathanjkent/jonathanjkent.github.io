@@ -14,7 +14,7 @@ My research has show that residents of cities with more continuous urban fabric 
 
 I believe continuous urban fabric may be an indicator of other social goods, but, alas, it isn't available in American geographic datasets. Thankfully, we can replicate the distinction by combining land cover and land use data. MassGIS helpfully provides [synergized shapefiles](https://www.mass.gov/info-details/massgis-data-2016-land-coverland-use). To compute an index of urban fabric continuity, I first identify how much land in a Census blockgroup (or tract, or block) is residential or mixed use. Then, of that land, I calculate the percentage that is impermeable.
 
-The result looks like this, for Boston: https://kentresearch.github.io/boston_urban_fabric.html
+[The result looks like this, for Boston.](https://kentresearch.github.io/boston_urban_fabric.html). Note that Jacobs beloved North End scores is highly continuous, with an index score of 0.97 or above for each of its blockgroups. Hint: by unchecking the Municipality layer, you can mouse over neighborhoods to see their urban fabric continuity scores.
 
 Stay tuned for more from this project, including replications of my previous findings for US contexts.
 
