@@ -7,8 +7,9 @@ title = "FUTSTAT.CAT"
 weight = 7
 +++
 
-[My first public foray into sports analytics](https://futstat.cat/) forecasts men's and women's Catalan football leagues from La Liga to the fifth tier. Visca Barça! Dale UESA!
 <!--more-->
+
+[My first public foray into sports analytics](https://futstat.cat/) forecasts men's and women's Catalan football leagues from La Liga to the fifth tier. Visca Barça! Dale UESA!
 
 ![Screenshot of FC Barcelona men's first team page on Futstat.cat](/img/futstat.png "FC Barcelona on Futstat.cat")
 

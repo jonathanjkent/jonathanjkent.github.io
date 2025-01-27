@@ -7,8 +7,9 @@ showonlyimage = true
 weight = 8
 +++
 
-During the early months of the pandemic, I launched [KBOfancystats.com](https://www.kbofancystats.com/) which provides advanced analytics and predictions for Korean baseball fans.
 <!--more-->
+
+During the early months of the pandemic, I launched [KBOfancystats.com](https://www.kbofancystats.com/) which provides advanced analytics and predictions for Korean baseball fans.
 
 ![Screenshot of LG Twins' page on KBOfancystats.com](/img/kbo.png "LG Twins on KBOfancystats.com")
 
