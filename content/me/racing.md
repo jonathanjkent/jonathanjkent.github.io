@@ -8,7 +8,7 @@ weight = 7
 plotly = true
 +++
 
-Like so many runners---especially those of us from New England---I am determined to eventually run a Boston Marathon qualifying time. <!--more--> My marathon personal best stands at 3:13 (8 minutes shy of a BQ) and, as you can see from the plot here, the journey has been long.
+Like so many runners---especially those of us from New England---I am determined to eventually run the Boston Marathon. <!--more--> My marathon personal best stands at 3:13 (8 minutes shy of a BQ) and, as you can see from the plot here, the journey has been long.
 
 
 {{< plotly json="/json/races.json" height="400px" >}}
