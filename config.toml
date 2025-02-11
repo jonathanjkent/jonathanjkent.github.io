@@ -14,7 +14,7 @@ googleAnalytics = ""
   description = "Dr. Jonathan Kent is a data scientist, marathon runner, and founder of sports analytics websites. "
   copyright = "&copy; J. Kent 2024"
   sidebarAbout = [
-    "I am passionate about drawing insights from data using Bayesian statistics and machine learning, and I enjoy exploring large, complex, and atypical datasets.", "Before getting a PhD in quantitative social science, I spent 10 years in Washington, DC and New York City advising political and business leaders on strategic communications. The skills from this stage of my career help me share sophisticated data science in an approachable and effective way, always emphasizing visualization."
+    "I am passionate about drawing insights from data using Bayesian statistics and machine learning, and I enjoy exploring large, complex, and atypical datasets.", "Before getting a PhD in quantitative social science, I spent 10 years in Washington, DC and New York City advising political and non-profit leaders on strategic communications. The skills from this stage of my career help me share sophisticated data science in an approachable and effective way, always emphasizing visualization."
   ]
   # Contact page
      # Since this template is static, the contact form uses www.formspree.io as a
