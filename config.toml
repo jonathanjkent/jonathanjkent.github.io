@@ -46,10 +46,6 @@ googleAnalytics = ""
   home = true
 
   [[params.navlinks]]
-  name = "Curriculum Vitae"
-  url = "me/cv/"
-
-  [[params.navlinks]]
   name = "Google Scholar"
   url = "https://scholar.google.com/citations?user=IKdgqG4AAAAJ&hl"
 
